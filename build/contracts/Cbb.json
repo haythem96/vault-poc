@@ -1,0 +1,106 @@
+{
+  "contractName": "Cbb",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/haythem96/Projects/testStruct/contracts/Cbb.sol\":\"Cbb\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/haythem96/Projects/testStruct/contracts/Cbb.sol\":{\"keccak256\":\"0x476dba62fc488be013c7f4a047ef1ce73626c6bf71a7a324853211bb8408e418\",\"urls\":[\"bzz-raw://68475e3183a56433a163e5b1a0fc90a5595e29887e17698d01b2091fbe36866f\",\"dweb:/ipfs/QmSqxehW5M2xaHcknTv3wNHj3WUGt4nzzmbUJSCsFMinko\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220ea94d00cb6ca1396b9e8b42d359be5e5a3be5f290e825513a2b6222dd3ece03764736f6c63430006090033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220ea94d00cb6ca1396b9e8b42d359be5e5a3be5f290e825513a2b6222dd3ece03764736f6c63430006090033",
+  "sourceMap": "25:18:1:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "25:18:1:-:0;;;;;",
+  "source": "pragma solidity 0.6.9;\n\n\ncontract Cbb {\n\n\n}\n",
+  "sourcePath": "/Users/haythem96/Projects/testStruct/contracts/Cbb.sol",
+  "ast": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/Cbb.sol",
+    "exportedSymbols": {
+      "Cbb": [
+        5
+      ]
+    },
+    "id": 6,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5,
+        "linearizedBaseContracts": [
+          5
+        ],
+        "name": "Cbb",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 6,
+        "src": "25:18:1"
+      }
+    ],
+    "src": "0:44:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/Cbb.sol",
+    "exportedSymbols": {
+      "Cbb": [
+        5
+      ]
+    },
+    "id": 6,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5,
+        "linearizedBaseContracts": [
+          5
+        ],
+        "name": "Cbb",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 6,
+        "src": "25:18:1"
+      }
+    ],
+    "src": "0:44:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-07-02T11:13:16.555Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

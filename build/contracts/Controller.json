@@ -1,0 +1,146 @@
+{
+  "contractName": "Controller",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/haythem96/Projects/testStruct/contracts/impl2/MarginCalculator.sol\":\"Controller\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/haythem96/Projects/testStruct/contracts/impl2/MarginAccountLib2.sol\":{\"keccak256\":\"0xb0123e8fcb403653cfc7db156fd5b6dab08471d965e2e0c4ef1eb2f4f68668b0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ab8c86b6946a4e74dbd95a894ce3f56c22795be0f23c0bda8fbe958ef5836e45\",\"dweb:/ipfs/QmSMfmLhotMqWj3fy41zfyPshw5StP6jS9uRDcvxu8cyKa\"]},\"/Users/haythem96/Projects/testStruct/contracts/impl2/MarginCalculator.sol\":{\"keccak256\":\"0x82d180700cd36efca3713cf51deb6c635537d9e48b44089a2da844e089131e8e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1ab1052f6a1341fecddd90e8e8d5f0e36e95e06063948d0ac6bfbe7e5e1fb132\",\"dweb:/ipfs/QmVUbByyxrwikcJLVcTpPMXM7fPAwWhc75pXxyFeE73hsk\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220eb24a2005a6d6854d7c38b37fa424682e3116d50963cb5b6587449c9c71f59c864736f6c63430006090033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220eb24a2005a6d6854d7c38b37fa424682e3116d50963cb5b6587449c9c71f59c864736f6c63430006090033",
+  "sourceMap": "127:581:9:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "127:581:9:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.9;\n\n\npragma experimental ABIEncoderV2;\n\nimport \"./MarginAccountLib2.sol\";\n\ncontract Controller {\n\n    /*function marginRequirement(\n        uint256 _vaultId,\n        address[] memory _shortAssets,\n        address[] memory _longAssets,\n        address[] memory _collAssets,\n        uint256[] memory _shortAmounts,\n        uint256[] memory _longAmounts,\n        uint256[] memory _collAmounts\n    ) external view {\n        MarginAccountLib2.Account storage account = accounts[msg.sender];\n\n        require(account.vaultCounter >= _vaultId, \"error vault id\");\n\n\t\tMarginAccountLib2.Vault memory vault = accountVaults[msg.sender][_vaultId];\n\n        \n\n    }*/\n\n}",
+  "sourcePath": "/Users/haythem96/Projects/testStruct/contracts/impl2/MarginCalculator.sol",
+  "ast": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/impl2/MarginCalculator.sol",
+    "exportedSymbols": {
+      "Controller": [
+        965
+      ]
+    },
+    "id": 966,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 962,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:9"
+      },
+      {
+        "id": 963,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:33:9"
+      },
+      {
+        "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/impl2/MarginAccountLib2.sol",
+        "file": "./MarginAccountLib2.sol",
+        "id": 964,
+        "nodeType": "ImportDirective",
+        "scope": 966,
+        "sourceUnit": 961,
+        "src": "92:33:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 965,
+        "linearizedBaseContracts": [
+          965
+        ],
+        "name": "Controller",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 966,
+        "src": "127:581:9"
+      }
+    ],
+    "src": "32:676:9"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/impl2/MarginCalculator.sol",
+    "exportedSymbols": {
+      "Controller": [
+        965
+      ]
+    },
+    "id": 966,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 962,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:9"
+      },
+      {
+        "id": 963,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:33:9"
+      },
+      {
+        "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/impl2/MarginAccountLib2.sol",
+        "file": "./MarginAccountLib2.sol",
+        "id": 964,
+        "nodeType": "ImportDirective",
+        "scope": 966,
+        "sourceUnit": 961,
+        "src": "92:33:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 965,
+        "linearizedBaseContracts": [
+          965
+        ],
+        "name": "Controller",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 966,
+        "src": "127:581:9"
+      }
+    ],
+    "src": "32:676:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-07-04T00:14:13.038Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

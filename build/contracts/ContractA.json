@@ -1,0 +1,1448 @@
+{
+  "contractName": "ContractA",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "a",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "b",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct ContractA.Vault",
+          "name": "finalVault",
+          "type": "tuple"
+        }
+      ],
+      "name": "updateVault",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getVault",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "a",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "b",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct ContractA.Vault",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getVault\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"internalType\":\"struct ContractA.Vault\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"a\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"}],\"internalType\":\"struct ContractA.Vault\",\"name\":\"finalVault\",\"type\":\"tuple\"}],\"name\":\"updateVault\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/haythem96/Projects/testStruct/contracts/ContractA.sol\":\"ContractA\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/haythem96/Projects/testStruct/contracts/ContractA.sol\":{\"keccak256\":\"0x5c28d3d68492a59e09638c0fee3a3f5b3a9f20c634c02455c1f56fd648cc4353\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4be60ea250071c46bd934fdebe9e862941840857dc7e13e1d46883b6a3bd7272\",\"dweb:/ipfs/QmRJy5qtChfvpNyvGoDzNrXSi49cJKa6sGLuutFmBSBK4N\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610019610063565b604051806040016040528060058152602001600a8152509050806000806001815260200190815260200160002060008201518160000155602082015181600101559050505061007d565b604051806040016040528060008152602001600081525090565b61029f8061008c6000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80639403b6341461003b578063ac41b8051461006b575b600080fd5b61005560048036038101906100509190610199565b610087565b6040516100629190610200565b60405180910390f35b61008560048036038101906100809190610170565b6100c7565b005b61008f6100f5565b600080838152602001908152602001600020604051806040016040529081600082015481526020016001820154815250509050919050565b8060008060018152602001908152602001600020600082015181600001556020820151816001015590505050565b604051806040016040528060008152602001600081525090565b60006040828403121561012157600080fd5b61012b604061021b565b9050600061013b8482850161015b565b600083015250602061014f8482850161015b565b60208301525092915050565b60008135905061016a81610252565b92915050565b60006040828403121561018257600080fd5b60006101908482850161010f565b91505092915050565b6000602082840312156101ab57600080fd5b60006101b98482850161015b565b91505092915050565b6040820160008201516101d860008501826101f1565b5060208201516101eb60208501826101f1565b50505050565b6101fa81610248565b82525050565b600060408201905061021560008301846101c2565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561023e57600080fd5b8060405250919050565b6000819050919050565b61025b81610248565b811461026657600080fd5b5056fea264697066735822122099980291d94befd9c6c8fcca6fec61420bbfe5e850b298bd5fc94a03069dcf5c64736f6c63430006090033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80639403b6341461003b578063ac41b8051461006b575b600080fd5b61005560048036038101906100509190610199565b610087565b6040516100629190610200565b60405180910390f35b61008560048036038101906100809190610170565b6100c7565b005b61008f6100f5565b600080838152602001908152602001600020604051806040016040529081600082015481526020016001820154815250509050919050565b8060008060018152602001908152602001600020600082015181600001556020820151816001015590505050565b604051806040016040528060008152602001600081525090565b60006040828403121561012157600080fd5b61012b604061021b565b9050600061013b8482850161015b565b600083015250602061014f8482850161015b565b60208301525092915050565b60008135905061016a81610252565b92915050565b60006040828403121561018257600080fd5b60006101908482850161010f565b91505092915050565b6000602082840312156101ab57600080fd5b60006101b98482850161015b565b91505092915050565b6040820160008201516101d860008501826101f1565b5060208201516101eb60208501826101f1565b50505050565b6101fa81610248565b82525050565b600060408201905061021560008301846101c2565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561023e57600080fd5b8060405250919050565b6000819050919050565b61025b81610248565b811461026657600080fd5b5056fea264697066735822122099980291d94befd9c6c8fcca6fec61420bbfe5e850b298bd5fc94a03069dcf5c64736f6c63430006090033",
+  "sourceMap": "91:394:0:-:0;;;203:88;;;;;;;;;;230:18;;:::i;:::-;251:12;;;;;;;;257:1;251:12;;;;260:2;251:12;;;230:33;;281:5;269:6;:9;276:1;269:9;;;;;;;;;;;:17;;;;;;;;;;;;;;;;;;;203:88;91:394;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "91:394:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;387:95;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;295:88;;;;;;;;;;;;;;;;:::i;:::-;;387:95;440:12;;:::i;:::-;467:6;:10;474:2;467:10;;;;;;;;;;;460:17;;;;;;;;;;;;;;;;;;;;;;;;;;;387:95;;;:::o;295:88::-;368:10;356:6;:9;363:1;356:9;;;;;;;;;;;:22;;;;;;;;;;;;;;;;;;;295:88;:::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;:::o;34:457::-;;144:4;132:9;127:3;123:19;119:30;116:2;;;162:1;159;152:12;116:2;180:20;195:4;180:20;;;171:29;;247:1;279:49;324:3;315:6;304:9;300:22;279:49;;;272:4;265:5;261:16;254:75;210:130;387:2;420:49;465:3;456:6;445:9;441:22;420:49;;;413:4;406:5;402:16;395:75;350:131;110:381;;;;;498:130;;578:6;565:20;556:29;;590:33;617:5;590:33;;;550:78;;;;;635:283;;760:2;748:9;739:7;735:23;731:32;728:2;;;776:1;773;766:12;728:2;811:1;828:74;894:7;885:6;874:9;870:22;828:74;;;818:84;;790:118;722:196;;;;;925:241;;1029:2;1017:9;1008:7;1004:23;1000:32;997:2;;;1045:1;1042;1035:12;997:2;1080:1;1097:53;1142:7;1133:6;1122:9;1118:22;1097:53;;;1087:63;;1059:97;991:175;;;;;1228:462;1363:4;1358:3;1354:14;1443:4;1436:5;1432:16;1426:23;1455:63;1512:4;1507:3;1503:14;1489:12;1455:63;;;1383:141;1594:4;1587:5;1583:16;1577:23;1606:63;1663:4;1658:3;1654:14;1640:12;1606:63;;;1534:141;1336:354;;;;1697:103;1770:24;1788:5;1770:24;;;1765:3;1758:37;1752:48;;;1807:306;;1976:2;1965:9;1961:18;1953:26;;1990:113;2100:1;2089:9;2085:17;2076:6;1990:113;;;1947:166;;;;;2120:256;;2182:2;2176:9;2166:19;;2220:4;2212:6;2208:17;2319:6;2307:10;2304:22;2283:18;2271:10;2268:34;2265:62;2262:2;;;2340:1;2337;2330:12;2262:2;2360:10;2356:2;2349:22;2160:216;;;;;2383:72;;2445:5;2434:16;;2428:27;;;;2462:117;2531:24;2549:5;2531:24;;;2524:5;2521:35;2511:2;;2570:1;2567;2560:12;2511:2;2505:74;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.9;\n\npragma experimental ABIEncoderV2;\n\ncontract ContractA {\n\n  mapping (uint256 => Vault) vaults;\n\n  struct Vault{\n    uint256 a;\n    uint256 b;\n  }\n  constructor() public {\n    Vault memory vault = Vault(5, 10);\n    vaults[1] = vault;\n  }\n\n  function updateVault(Vault memory finalVault) external {\n    vaults[1] = finalVault;\n  }\n\n  function getVault(uint256 id) external view returns (Vault memory) {\n    return vaults[id];\n  }\n\n}\n",
+  "sourcePath": "/Users/haythem96/Projects/testStruct/contracts/ContractA.sol",
+  "ast": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/ContractA.sol",
+    "exportedSymbols": {
+      "ContractA": [
+        53
+      ]
+    },
+    "id": 54,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:0"
+      },
+      {
+        "id": 2,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "56:33:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 53,
+        "linearizedBaseContracts": [
+          53
+        ],
+        "name": "ContractA",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6,
+            "mutability": "mutable",
+            "name": "vaults",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 53,
+            "src": "115:33:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vault_$11_storage_$",
+              "typeString": "mapping(uint256 => struct ContractA.Vault)"
+            },
+            "typeName": {
+              "id": 5,
+              "keyType": {
+                "id": 3,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "124:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "115:26:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vault_$11_storage_$",
+                "typeString": "mapping(uint256 => struct ContractA.Vault)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 4,
+                "name": "Vault",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 11,
+                "src": "135:5:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Vault_$11_storage_ptr",
+                  "typeString": "struct ContractA.Vault"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "ContractA.Vault",
+            "id": 11,
+            "members": [
+              {
+                "constant": false,
+                "id": 8,
+                "mutability": "mutable",
+                "name": "a",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 11,
+                "src": "171:9:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 7,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "171:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 10,
+                "mutability": "mutable",
+                "name": "b",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 11,
+                "src": "186:9:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "186:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Vault",
+            "nodeType": "StructDefinition",
+            "scope": 53,
+            "src": "153:47:0",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 27,
+              "nodeType": "Block",
+              "src": "224:67:0",
+              "statements": [
+                {
+                  "assignments": [
+                    15
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 15,
+                      "mutability": "mutable",
+                      "name": "vault",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 27,
+                      "src": "230:18:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$11_memory_ptr",
+                        "typeString": "struct ContractA.Vault"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 14,
+                        "name": "Vault",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 11,
+                        "src": "230:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$11_storage_ptr",
+                          "typeString": "struct ContractA.Vault"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 20,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "35",
+                        "id": 17,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "257:1:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_5_by_1",
+                          "typeString": "int_const 5"
+                        },
+                        "value": "5"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "3130",
+                        "id": 18,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "260:2:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_10_by_1",
+                          "typeString": "int_const 10"
+                        },
+                        "value": "10"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_5_by_1",
+                          "typeString": "int_const 5"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_10_by_1",
+                          "typeString": "int_const 10"
+                        }
+                      ],
+                      "id": 16,
+                      "name": "Vault",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11,
+                      "src": "251:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Vault_$11_storage_ptr_$",
+                        "typeString": "type(struct ContractA.Vault storage pointer)"
+                      }
+                    },
+                    "id": 19,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "251:12:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$11_memory_ptr",
+                      "typeString": "struct ContractA.Vault memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "230:33:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 25,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 21,
+                        "name": "vaults",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "269:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vault_$11_storage_$",
+                          "typeString": "mapping(uint256 => struct ContractA.Vault storage ref)"
+                        }
+                      },
+                      "id": 23,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 22,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "276:1:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "269:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$11_storage",
+                        "typeString": "struct ContractA.Vault storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 24,
+                      "name": "vault",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 15,
+                      "src": "281:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$11_memory_ptr",
+                        "typeString": "struct ContractA.Vault memory"
+                      }
+                    },
+                    "src": "269:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$11_storage",
+                      "typeString": "struct ContractA.Vault storage ref"
+                    }
+                  },
+                  "id": 26,
+                  "nodeType": "ExpressionStatement",
+                  "src": "269:17:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 28,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "214:2:0"
+            },
+            "returnParameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "224:0:0"
+            },
+            "scope": 53,
+            "src": "203:88:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 39,
+              "nodeType": "Block",
+              "src": "350:33:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 37,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 33,
+                        "name": "vaults",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "356:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vault_$11_storage_$",
+                          "typeString": "mapping(uint256 => struct ContractA.Vault storage ref)"
+                        }
+                      },
+                      "id": 35,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 34,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "363:1:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "356:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$11_storage",
+                        "typeString": "struct ContractA.Vault storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 36,
+                      "name": "finalVault",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 30,
+                      "src": "368:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$11_memory_ptr",
+                        "typeString": "struct ContractA.Vault memory"
+                      }
+                    },
+                    "src": "356:22:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$11_storage",
+                      "typeString": "struct ContractA.Vault storage ref"
+                    }
+                  },
+                  "id": 38,
+                  "nodeType": "ExpressionStatement",
+                  "src": "356:22:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "ac41b805",
+            "id": 40,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateVault",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30,
+                  "mutability": "mutable",
+                  "name": "finalVault",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 40,
+                  "src": "316:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Vault_$11_memory_ptr",
+                    "typeString": "struct ContractA.Vault"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 29,
+                    "name": "Vault",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 11,
+                    "src": "316:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$11_storage_ptr",
+                      "typeString": "struct ContractA.Vault"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "315:25:0"
+            },
+            "returnParameters": {
+              "id": 32,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "350:0:0"
+            },
+            "scope": 53,
+            "src": "295:88:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 51,
+              "nodeType": "Block",
+              "src": "454:28:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 47,
+                      "name": "vaults",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "467:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vault_$11_storage_$",
+                        "typeString": "mapping(uint256 => struct ContractA.Vault storage ref)"
+                      }
+                    },
+                    "id": 49,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 48,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 42,
+                      "src": "474:2:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "467:10:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$11_storage",
+                      "typeString": "struct ContractA.Vault storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 46,
+                  "id": 50,
+                  "nodeType": "Return",
+                  "src": "460:17:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "9403b634",
+            "id": 52,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVault",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 42,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 52,
+                  "src": "405:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "405:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "404:12:0"
+            },
+            "returnParameters": {
+              "id": 46,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 45,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 52,
+                  "src": "440:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Vault_$11_memory_ptr",
+                    "typeString": "struct ContractA.Vault"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 44,
+                    "name": "Vault",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 11,
+                    "src": "440:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$11_storage_ptr",
+                      "typeString": "struct ContractA.Vault"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "439:14:0"
+            },
+            "scope": 53,
+            "src": "387:95:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 54,
+        "src": "91:394:0"
+      }
+    ],
+    "src": "32:454:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/ContractA.sol",
+    "exportedSymbols": {
+      "ContractA": [
+        53
+      ]
+    },
+    "id": 54,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:0"
+      },
+      {
+        "id": 2,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "56:33:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 53,
+        "linearizedBaseContracts": [
+          53
+        ],
+        "name": "ContractA",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6,
+            "mutability": "mutable",
+            "name": "vaults",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 53,
+            "src": "115:33:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vault_$11_storage_$",
+              "typeString": "mapping(uint256 => struct ContractA.Vault)"
+            },
+            "typeName": {
+              "id": 5,
+              "keyType": {
+                "id": 3,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "124:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "115:26:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vault_$11_storage_$",
+                "typeString": "mapping(uint256 => struct ContractA.Vault)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 4,
+                "name": "Vault",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 11,
+                "src": "135:5:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Vault_$11_storage_ptr",
+                  "typeString": "struct ContractA.Vault"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "ContractA.Vault",
+            "id": 11,
+            "members": [
+              {
+                "constant": false,
+                "id": 8,
+                "mutability": "mutable",
+                "name": "a",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 11,
+                "src": "171:9:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 7,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "171:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 10,
+                "mutability": "mutable",
+                "name": "b",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 11,
+                "src": "186:9:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "186:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Vault",
+            "nodeType": "StructDefinition",
+            "scope": 53,
+            "src": "153:47:0",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 27,
+              "nodeType": "Block",
+              "src": "224:67:0",
+              "statements": [
+                {
+                  "assignments": [
+                    15
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 15,
+                      "mutability": "mutable",
+                      "name": "vault",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 27,
+                      "src": "230:18:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$11_memory_ptr",
+                        "typeString": "struct ContractA.Vault"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 14,
+                        "name": "Vault",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 11,
+                        "src": "230:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$11_storage_ptr",
+                          "typeString": "struct ContractA.Vault"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 20,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "35",
+                        "id": 17,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "257:1:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_5_by_1",
+                          "typeString": "int_const 5"
+                        },
+                        "value": "5"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "3130",
+                        "id": 18,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "260:2:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_10_by_1",
+                          "typeString": "int_const 10"
+                        },
+                        "value": "10"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_5_by_1",
+                          "typeString": "int_const 5"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_10_by_1",
+                          "typeString": "int_const 10"
+                        }
+                      ],
+                      "id": 16,
+                      "name": "Vault",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11,
+                      "src": "251:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Vault_$11_storage_ptr_$",
+                        "typeString": "type(struct ContractA.Vault storage pointer)"
+                      }
+                    },
+                    "id": 19,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "251:12:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$11_memory_ptr",
+                      "typeString": "struct ContractA.Vault memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "230:33:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 25,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 21,
+                        "name": "vaults",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "269:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vault_$11_storage_$",
+                          "typeString": "mapping(uint256 => struct ContractA.Vault storage ref)"
+                        }
+                      },
+                      "id": 23,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 22,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "276:1:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "269:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$11_storage",
+                        "typeString": "struct ContractA.Vault storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 24,
+                      "name": "vault",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 15,
+                      "src": "281:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$11_memory_ptr",
+                        "typeString": "struct ContractA.Vault memory"
+                      }
+                    },
+                    "src": "269:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$11_storage",
+                      "typeString": "struct ContractA.Vault storage ref"
+                    }
+                  },
+                  "id": 26,
+                  "nodeType": "ExpressionStatement",
+                  "src": "269:17:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 28,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "214:2:0"
+            },
+            "returnParameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "224:0:0"
+            },
+            "scope": 53,
+            "src": "203:88:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 39,
+              "nodeType": "Block",
+              "src": "350:33:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 37,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 33,
+                        "name": "vaults",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "356:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vault_$11_storage_$",
+                          "typeString": "mapping(uint256 => struct ContractA.Vault storage ref)"
+                        }
+                      },
+                      "id": 35,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 34,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "363:1:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "356:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$11_storage",
+                        "typeString": "struct ContractA.Vault storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 36,
+                      "name": "finalVault",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 30,
+                      "src": "368:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$11_memory_ptr",
+                        "typeString": "struct ContractA.Vault memory"
+                      }
+                    },
+                    "src": "356:22:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$11_storage",
+                      "typeString": "struct ContractA.Vault storage ref"
+                    }
+                  },
+                  "id": 38,
+                  "nodeType": "ExpressionStatement",
+                  "src": "356:22:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "ac41b805",
+            "id": 40,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateVault",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30,
+                  "mutability": "mutable",
+                  "name": "finalVault",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 40,
+                  "src": "316:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Vault_$11_memory_ptr",
+                    "typeString": "struct ContractA.Vault"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 29,
+                    "name": "Vault",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 11,
+                    "src": "316:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$11_storage_ptr",
+                      "typeString": "struct ContractA.Vault"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "315:25:0"
+            },
+            "returnParameters": {
+              "id": 32,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "350:0:0"
+            },
+            "scope": 53,
+            "src": "295:88:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 51,
+              "nodeType": "Block",
+              "src": "454:28:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 47,
+                      "name": "vaults",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "467:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Vault_$11_storage_$",
+                        "typeString": "mapping(uint256 => struct ContractA.Vault storage ref)"
+                      }
+                    },
+                    "id": 49,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 48,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 42,
+                      "src": "474:2:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "467:10:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$11_storage",
+                      "typeString": "struct ContractA.Vault storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 46,
+                  "id": 50,
+                  "nodeType": "Return",
+                  "src": "460:17:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "9403b634",
+            "id": 52,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVault",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 42,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 52,
+                  "src": "405:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "405:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "404:12:0"
+            },
+            "returnParameters": {
+              "id": 46,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 45,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 52,
+                  "src": "440:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Vault_$11_memory_ptr",
+                    "typeString": "struct ContractA.Vault"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 44,
+                    "name": "Vault",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 11,
+                    "src": "440:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$11_storage_ptr",
+                      "typeString": "struct ContractA.Vault"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "439:14:0"
+            },
+            "scope": 53,
+            "src": "387:95:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 54,
+        "src": "91:394:0"
+      }
+    ],
+    "src": "32:454:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-07-01T23:57:37.083Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

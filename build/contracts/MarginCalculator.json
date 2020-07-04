@@ -1,0 +1,124 @@
+{
+  "contractName": "MarginCalculator",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/haythem96/Projects/testStruct/contracts/MarginCalculator.sol\":\"MarginCalculator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/haythem96/Projects/testStruct/contracts/MarginCalculator.sol\":{\"keccak256\":\"0xb6f9f552c4f273cdfafc514ba89d523df0db75e17dd6a2c80af9605b68fa1895\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://845070c1adc28936d8aa6963070dbb3433f9846feb3a399fd292e6cc85cfedc3\",\"dweb:/ipfs/QmXaAzXYWSzPcvxHuGjR1S7qkVYtUwF1W61ucK8rZt74Qe\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220a497bbc49eb9b5c1f66d793ee2ab53e1240864b825e92abad0b853bd9a6b550464736f6c63430006090033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220a497bbc49eb9b5c1f66d793ee2ab53e1240864b825e92abad0b853bd9a6b550464736f6c63430006090033",
+  "sourceMap": "128:148:5:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "128:148:5:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.9;\n\n\npragma experimental ABIEncoderV2;\n\n//import \"./MarginAccountLib.sol\";\n\ncontract MarginCalculator {\n\n    /*function checkMarginRequirement(MarginAccountLib.Vault memory vault) external view returns (uint256) {\n    }*/\n\n}\n",
+  "sourcePath": "/Users/haythem96/Projects/testStruct/contracts/MarginCalculator.sol",
+  "ast": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/MarginCalculator.sol",
+    "exportedSymbols": {
+      "MarginCalculator": [
+        485
+      ]
+    },
+    "id": 486,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 483,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:5"
+      },
+      {
+        "id": 484,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:33:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 485,
+        "linearizedBaseContracts": [
+          485
+        ],
+        "name": "MarginCalculator",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 486,
+        "src": "128:148:5"
+      }
+    ],
+    "src": "32:245:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/MarginCalculator.sol",
+    "exportedSymbols": {
+      "MarginCalculator": [
+        485
+      ]
+    },
+    "id": 486,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 483,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:5"
+      },
+      {
+        "id": 484,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:33:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 485,
+        "linearizedBaseContracts": [
+          485
+        ],
+        "name": "MarginCalculator",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 486,
+        "src": "128:148:5"
+      }
+    ],
+    "src": "32:245:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-07-03T21:32:07.601Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

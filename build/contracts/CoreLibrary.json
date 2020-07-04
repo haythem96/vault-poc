@@ -1,0 +1,2626 @@
+{
+  "contractName": "CoreLibrary",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/haythem96/Projects/testStruct/contracts/CoreLibrary.sol\":\"CoreLibrary\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/haythem96/Projects/testStruct/contracts/CoreLibrary.sol\":{\"keccak256\":\"0xcd3d7c4b386d59897115c2c33cd416659d732d8ef1709aee38bdbe7f6432e368\",\"urls\":[\"bzz-raw://43d340490c090d043f9f893a41f9b2efc2fa0e2d44c7bafbf99c61c2b4aa9a6a\",\"dweb:/ipfs/QmPf7vrG584rNNdASgnYGZh5KWVDxtrQ1SPJ73UVqxGTJU\"]}},\"version\":1}",
+  "bytecode": "0x61049c610026600b82828239805160001a60731461001957fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361061004b5760003560e01c80633de861f0146100505780638638950714610079578063c9f76ae4146100a2575b600080fd5b81801561005c57600080fd5b50610077600480360381019061007291906102a8565b6100d2565b005b81801561008557600080fd5b506100a0600480360381019061009b91906102f7565b61014f565b005b6100bc60048036038101906100b7919061026c565b6101d0565b6040516100c991906103f8565b60405180910390f35b6100da610228565b60405180604001604052808481526020018381525090508360000160008154809291906001019190505550836001018190806001815401808255809150506001900390600052602060002090600202016000909190919091506000820151816000015560208201518160010155505050505050565b8284600001541015610196576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161018d906103d8565b60405180910390fd5b60008460010184815481106101a757fe5b906000526020600020906002020190508281600001819055508181600101819055505050505050565b6101d8610228565b6101e0610228565b8360010183815481106101ef57fe5b90600052602060002090600202016040518060400160405290816000820154815260200160018201548152505090508091505092915050565b604051806040016040528060008152602001600081525090565b60008135905061025181610438565b92915050565b6000813590506102668161044f565b92915050565b6000806040838503121561027f57600080fd5b600061028d85828601610242565b925050602061029e85828601610257565b9150509250929050565b6000806000606084860312156102bd57600080fd5b60006102cb86828701610242565b93505060206102dc86828701610257565b92505060406102ed86828701610257565b9150509250925092565b6000806000806080858703121561030d57600080fd5b600061031b87828801610242565b945050602061032c87828801610257565b935050604061033d87828801610257565b925050606061034e87828801610257565b91505092959194509250565b6000610367600783610413565b91507f6572726f722031000000000000000000000000000000000000000000000000006000830152602082019050919050565b6040820160008201516103b060008501826103c9565b5060208201516103c360208501826103c9565b50505050565b6103d28161042e565b82525050565b600060208201905081810360008301526103f18161035a565b9050919050565b600060408201905061040d600083018461039a565b92915050565b600082825260208201905092915050565b6000819050919050565b6000819050919050565b61044181610424565b811461044c57600080fd5b50565b6104588161042e565b811461046357600080fd5b5056fea2646970667358221220d932cd6ae4888dd7a78a5e658568ead4f4606463c0b110d89d6a4a6956acab2f64736f6c63430006090033",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361061004b5760003560e01c80633de861f0146100505780638638950714610079578063c9f76ae4146100a2575b600080fd5b81801561005c57600080fd5b50610077600480360381019061007291906102a8565b6100d2565b005b81801561008557600080fd5b506100a0600480360381019061009b91906102f7565b61014f565b005b6100bc60048036038101906100b7919061026c565b6101d0565b6040516100c991906103f8565b60405180910390f35b6100da610228565b60405180604001604052808481526020018381525090508360000160008154809291906001019190505550836001018190806001815401808255809150506001900390600052602060002090600202016000909190919091506000820151816000015560208201518160010155505050505050565b8284600001541015610196576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161018d906103d8565b60405180910390fd5b60008460010184815481106101a757fe5b906000526020600020906002020190508281600001819055508181600101819055505050505050565b6101d8610228565b6101e0610228565b8360010183815481106101ef57fe5b90600052602060002090600202016040518060400160405290816000820154815260200160018201548152505090508091505092915050565b604051806040016040528060008152602001600081525090565b60008135905061025181610438565b92915050565b6000813590506102668161044f565b92915050565b6000806040838503121561027f57600080fd5b600061028d85828601610242565b925050602061029e85828601610257565b9150509250929050565b6000806000606084860312156102bd57600080fd5b60006102cb86828701610242565b93505060206102dc86828701610257565b92505060406102ed86828701610257565b9150509250925092565b6000806000806080858703121561030d57600080fd5b600061031b87828801610242565b945050602061032c87828801610257565b935050604061033d87828801610257565b925050606061034e87828801610257565b91505092959194509250565b6000610367600783610413565b91507f6572726f722031000000000000000000000000000000000000000000000000006000830152602082019050919050565b6040820160008201516103b060008501826103c9565b5060208201516103c360208501826103c9565b50505050565b6103d28161042e565b82525050565b600060208201905081810360008301526103f18161035a565b9050919050565b600060408201905061040d600083018461039a565b92915050565b600082825260208201905092915050565b6000819050919050565b6000819050919050565b61044181610424565b811461044c57600080fd5b50565b6104588161042e565b811461046357600080fd5b5056fea2646970667358221220d932cd6ae4888dd7a78a5e658568ead4f4606463c0b110d89d6a4a6956acab2f64736f6c63430006090033",
+  "sourceMap": "60:687:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "60:687:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;419:166;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;200:216;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;588:155;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;419:166;496:18;;:::i;:::-;517:11;;;;;;;;523:1;517:11;;;;526:1;517:11;;;496:32;;533:5;:18;;;:20;;;;;;;;;;;;;557:5;:12;;575:5;557:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;419:166;;;;:::o;200:216::-;321:2;299:5;:18;;;:24;;291:44;;;;;;;;;;;;;;;;;;;;;;342:19;364:5;:12;;377:2;364:16;;;;;;;;;;;;;;;;;;342:38;;395:1;385:5;:7;;:11;;;;410:1;400:5;:7;;:11;;;;200:216;;;;;:::o;588:155::-;664:12;;:::i;:::-;684:18;;:::i;:::-;705:5;:12;;718:2;705:16;;;;;;;;;;;;;;;;;;684:37;;;;;;;;;;;;;;;;;;;;;;;;;;;733:5;726:12;;;588:155;;;;:::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;:::o;5:178::-;;109:6;96:20;87:29;;121:57;172:5;121:57;;;81:102;;;;;190:130;;270:6;257:20;248:29;;282:33;309:5;282:33;;;242:78;;;;;327:414;;;472:2;460:9;451:7;447:23;443:32;440:2;;;488:1;485;478:12;440:2;523:1;540:77;609:7;600:6;589:9;585:22;540:77;;;530:87;;502:121;654:2;672:53;717:7;708:6;697:9;693:22;672:53;;;662:63;;633:98;434:307;;;;;;748:539;;;;910:2;898:9;889:7;885:23;881:32;878:2;;;926:1;923;916:12;878:2;961:1;978:77;1047:7;1038:6;1027:9;1023:22;978:77;;;968:87;;940:121;1092:2;1110:53;1155:7;1146:6;1135:9;1131:22;1110:53;;;1100:63;;1071:98;1200:2;1218:53;1263:7;1254:6;1243:9;1239:22;1218:53;;;1208:63;;1179:98;872:415;;;;;;1294:665;;;;;1473:3;1461:9;1452:7;1448:23;1444:33;1441:2;;;1490:1;1487;1480:12;1441:2;1525:1;1542:77;1611:7;1602:6;1591:9;1587:22;1542:77;;;1532:87;;1504:121;1656:2;1674:53;1719:7;1710:6;1699:9;1695:22;1674:53;;;1664:63;;1635:98;1764:2;1782:53;1827:7;1818:6;1807:9;1803:22;1782:53;;;1772:63;;1743:98;1872:2;1890:53;1935:7;1926:6;1915:9;1911:22;1890:53;;;1880:63;;1851:98;1435:524;;;;;;;;1967:306;;2127:66;2191:1;2186:3;2127:66;;;2120:73;;2226:9;2222:1;2217:3;2213:11;2206:30;2264:2;2259:3;2255:12;2248:19;;2113:160;;;;2340:486;2483:4;2478:3;2474:14;2563:4;2556:5;2552:16;2546:23;2575:71;2640:4;2635:3;2631:14;2617:12;2575:71;;;2503:149;2722:4;2715:5;2711:16;2705:23;2734:71;2799:4;2794:3;2790:14;2776:12;2734:71;;;2662:149;2456:370;;;;2833:111;2914:24;2932:5;2914:24;;;2909:3;2902:37;2896:48;;;2951:416;;3151:2;3140:9;3136:18;3128:26;;3201:9;3195:4;3191:20;3187:1;3176:9;3172:17;3165:47;3226:131;3352:4;3226:131;;;3218:139;;3122:245;;;;3374:322;;3551:2;3540:9;3536:18;3528:26;;3565:121;3683:1;3672:9;3668:17;3659:6;3565:121;;;3522:174;;;;;3704:163;;3819:6;3814:3;3807:19;3856:4;3851:3;3847:14;3832:29;;3800:67;;;;;3875:96;;3961:5;3950:16;;3944:27;;;;3978:72;;4040:5;4029:16;;4023:27;;;;4057:165;4150:48;4192:5;4150:48;;;4143:5;4140:59;4130:2;;4213:1;4210;4203:12;4130:2;4124:98;;4229:117;4298:24;4316:5;4298:24;;;4291:5;4288:35;4278:2;;4337:1;4334;4327:12;4278:2;4272:74;",
+  "source": "pragma solidity 0.6.9;\n\n\npragma experimental ABIEncoderV2;\n\nlibrary CoreLibrary {\n\n\tstruct Account {\n\t\tuint256 vaultCounter;\n\t\tVault[] vaults;\n\t}\n\n\tstruct Vault {\n    uint256 a;\n    uint256 b;\n  }\n\t\n\tfunction updateVault(Account storage _self, uint256 id, uint256 a, uint256 b) external {\n\t\trequire(_self.vaultCounter >= id, \"error 1\");\n\n    Vault storage vault = _self.vaults[id];\n\n\t\tvault.a = a;\n\t\tvault.b = b;\n  }\n\n\tfunction initVault(Account storage _self, uint256 a, uint256 b) external {\n\t\tVault memory vault = Vault(a, b);\n\n\t\t_self.vaultCounter++;\n\t\t_self.vaults.push(vault);\n\t}\n\n\tfunction getVault(Account storage _self, uint256 id) external view returns (Vault memory) {\n    Vault memory vault = _self.vaults[id];\n\n\t\treturn vault;\n  }\n\n\n}",
+  "sourcePath": "/Users/haythem96/Projects/testStruct/contracts/CoreLibrary.sol",
+  "ast": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/CoreLibrary.sol",
+    "exportedSymbols": {
+      "CoreLibrary": [
+        108
+      ]
+    },
+    "id": 109,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:2"
+      },
+      {
+        "id": 8,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "25:33:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 108,
+        "linearizedBaseContracts": [
+          108
+        ],
+        "name": "CoreLibrary",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "CoreLibrary.Account",
+            "id": 14,
+            "members": [
+              {
+                "constant": false,
+                "id": 10,
+                "mutability": "mutable",
+                "name": "vaultCounter",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 14,
+                "src": "103:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "103:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13,
+                "mutability": "mutable",
+                "name": "vaults",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 14,
+                "src": "127:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Vault_$19_storage_$dyn_storage_ptr",
+                  "typeString": "struct CoreLibrary.Vault[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 11,
+                    "name": "Vault",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 19,
+                    "src": "127:5:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                      "typeString": "struct CoreLibrary.Vault"
+                    }
+                  },
+                  "id": 12,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "127:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Vault_$19_storage_$dyn_storage_ptr",
+                    "typeString": "struct CoreLibrary.Vault[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Account",
+            "nodeType": "StructDefinition",
+            "scope": 108,
+            "src": "84:61:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "CoreLibrary.Vault",
+            "id": 19,
+            "members": [
+              {
+                "constant": false,
+                "id": 16,
+                "mutability": "mutable",
+                "name": "a",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 19,
+                "src": "167:9:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 15,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "167:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18,
+                "mutability": "mutable",
+                "name": "b",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 19,
+                "src": "182:9:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 17,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "182:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Vault",
+            "nodeType": "StructDefinition",
+            "scope": 108,
+            "src": "148:48:2",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 57,
+              "nodeType": "Block",
+              "src": "287:129:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 34,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 31,
+                            "name": "_self",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 21,
+                            "src": "299:5:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                              "typeString": "struct CoreLibrary.Account storage pointer"
+                            }
+                          },
+                          "id": 32,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "vaultCounter",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 10,
+                          "src": "299:18:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 33,
+                          "name": "id",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 23,
+                          "src": "321:2:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "299:24:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6572726f722031",
+                        "id": 35,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "325:9:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_976b50a4d3e8b21ce35b59a1def9344af55038e9451235123e21ac3eb636b457",
+                          "typeString": "literal_string \"error 1\""
+                        },
+                        "value": "error 1"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_976b50a4d3e8b21ce35b59a1def9344af55038e9451235123e21ac3eb636b457",
+                          "typeString": "literal_string \"error 1\""
+                        }
+                      ],
+                      "id": 30,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "291:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 36,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "291:44:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 37,
+                  "nodeType": "ExpressionStatement",
+                  "src": "291:44:2"
+                },
+                {
+                  "assignments": [
+                    39
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 39,
+                      "mutability": "mutable",
+                      "name": "vault",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 57,
+                      "src": "342:19:2",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                        "typeString": "struct CoreLibrary.Vault"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 38,
+                        "name": "Vault",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 19,
+                        "src": "342:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                          "typeString": "struct CoreLibrary.Vault"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 44,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 40,
+                        "name": "_self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "364:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                          "typeString": "struct CoreLibrary.Account storage pointer"
+                        }
+                      },
+                      "id": 41,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "vaults",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13,
+                      "src": "364:12:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Vault_$19_storage_$dyn_storage",
+                        "typeString": "struct CoreLibrary.Vault storage ref[] storage ref"
+                      }
+                    },
+                    "id": 43,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 42,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 23,
+                      "src": "377:2:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "364:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$19_storage",
+                      "typeString": "struct CoreLibrary.Vault storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "342:38:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 49,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 45,
+                        "name": "vault",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39,
+                        "src": "385:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                          "typeString": "struct CoreLibrary.Vault storage pointer"
+                        }
+                      },
+                      "id": 47,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "a",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 16,
+                      "src": "385:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 48,
+                      "name": "a",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 25,
+                      "src": "395:1:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "385:11:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 50,
+                  "nodeType": "ExpressionStatement",
+                  "src": "385:11:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 55,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 51,
+                        "name": "vault",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39,
+                        "src": "400:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                          "typeString": "struct CoreLibrary.Vault storage pointer"
+                        }
+                      },
+                      "id": 53,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "b",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18,
+                      "src": "400:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 54,
+                      "name": "b",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27,
+                      "src": "410:1:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "400:11:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 56,
+                  "nodeType": "ExpressionStatement",
+                  "src": "400:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "86389507",
+            "id": 58,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateVault",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21,
+                  "mutability": "mutable",
+                  "name": "_self",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 58,
+                  "src": "221:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                    "typeString": "struct CoreLibrary.Account"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 20,
+                    "name": "Account",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 14,
+                    "src": "221:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                      "typeString": "struct CoreLibrary.Account"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 23,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 58,
+                  "src": "244:10:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "244:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25,
+                  "mutability": "mutable",
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 58,
+                  "src": "256:9:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 24,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "256:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27,
+                  "mutability": "mutable",
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 58,
+                  "src": "267:9:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "267:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "220:57:2"
+            },
+            "returnParameters": {
+              "id": 29,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "287:0:2"
+            },
+            "scope": 108,
+            "src": "200:216:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 87,
+              "nodeType": "Block",
+              "src": "492:93:2",
+              "statements": [
+                {
+                  "assignments": [
+                    68
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 68,
+                      "mutability": "mutable",
+                      "name": "vault",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 87,
+                      "src": "496:18:2",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                        "typeString": "struct CoreLibrary.Vault"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 67,
+                        "name": "Vault",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 19,
+                        "src": "496:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                          "typeString": "struct CoreLibrary.Vault"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 73,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 70,
+                        "name": "a",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 62,
+                        "src": "523:1:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 71,
+                        "name": "b",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 64,
+                        "src": "526:1:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 69,
+                      "name": "Vault",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 19,
+                      "src": "517:5:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Vault_$19_storage_ptr_$",
+                        "typeString": "type(struct CoreLibrary.Vault storage pointer)"
+                      }
+                    },
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "517:11:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                      "typeString": "struct CoreLibrary.Vault memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "496:32:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 77,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "533:20:2",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 74,
+                        "name": "_self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60,
+                        "src": "533:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                          "typeString": "struct CoreLibrary.Account storage pointer"
+                        }
+                      },
+                      "id": 76,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "vaultCounter",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10,
+                      "src": "533:18:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 78,
+                  "nodeType": "ExpressionStatement",
+                  "src": "533:20:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 84,
+                        "name": "vault",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 68,
+                        "src": "575:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                          "typeString": "struct CoreLibrary.Vault memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                          "typeString": "struct CoreLibrary.Vault memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 79,
+                          "name": "_self",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 60,
+                          "src": "557:5:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                            "typeString": "struct CoreLibrary.Account storage pointer"
+                          }
+                        },
+                        "id": 82,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "vaults",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 13,
+                        "src": "557:12:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Vault_$19_storage_$dyn_storage",
+                          "typeString": "struct CoreLibrary.Vault storage ref[] storage ref"
+                        }
+                      },
+                      "id": 83,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "557:17:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Vault_$19_storage_$returns$__$",
+                        "typeString": "function (struct CoreLibrary.Vault storage ref)"
+                      }
+                    },
+                    "id": 85,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "557:24:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 86,
+                  "nodeType": "ExpressionStatement",
+                  "src": "557:24:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "3de861f0",
+            "id": 88,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initVault",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 65,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60,
+                  "mutability": "mutable",
+                  "name": "_self",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 88,
+                  "src": "438:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                    "typeString": "struct CoreLibrary.Account"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 59,
+                    "name": "Account",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 14,
+                    "src": "438:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                      "typeString": "struct CoreLibrary.Account"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "mutability": "mutable",
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 88,
+                  "src": "461:9:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "461:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 64,
+                  "mutability": "mutable",
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 88,
+                  "src": "472:9:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 63,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "472:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "437:45:2"
+            },
+            "returnParameters": {
+              "id": 66,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "492:0:2"
+            },
+            "scope": 108,
+            "src": "419:166:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 106,
+              "nodeType": "Block",
+              "src": "678:65:2",
+              "statements": [
+                {
+                  "assignments": [
+                    98
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 98,
+                      "mutability": "mutable",
+                      "name": "vault",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 106,
+                      "src": "684:18:2",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                        "typeString": "struct CoreLibrary.Vault"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 97,
+                        "name": "Vault",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 19,
+                        "src": "684:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                          "typeString": "struct CoreLibrary.Vault"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 103,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 99,
+                        "name": "_self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 90,
+                        "src": "705:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                          "typeString": "struct CoreLibrary.Account storage pointer"
+                        }
+                      },
+                      "id": 100,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "vaults",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13,
+                      "src": "705:12:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Vault_$19_storage_$dyn_storage",
+                        "typeString": "struct CoreLibrary.Vault storage ref[] storage ref"
+                      }
+                    },
+                    "id": 102,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 101,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 92,
+                      "src": "718:2:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "705:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$19_storage",
+                      "typeString": "struct CoreLibrary.Vault storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "684:37:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 104,
+                    "name": "vault",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 98,
+                    "src": "733:5:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                      "typeString": "struct CoreLibrary.Vault memory"
+                    }
+                  },
+                  "functionReturnParameters": 96,
+                  "id": 105,
+                  "nodeType": "Return",
+                  "src": "726:12:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "c9f76ae4",
+            "id": 107,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVault",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 93,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 90,
+                  "mutability": "mutable",
+                  "name": "_self",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 107,
+                  "src": "606:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                    "typeString": "struct CoreLibrary.Account"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 89,
+                    "name": "Account",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 14,
+                    "src": "606:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                      "typeString": "struct CoreLibrary.Account"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 92,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 107,
+                  "src": "629:10:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 91,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "629:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "605:35:2"
+            },
+            "returnParameters": {
+              "id": 96,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 95,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 107,
+                  "src": "664:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                    "typeString": "struct CoreLibrary.Vault"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 94,
+                    "name": "Vault",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 19,
+                    "src": "664:5:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                      "typeString": "struct CoreLibrary.Vault"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "663:14:2"
+            },
+            "scope": 108,
+            "src": "588:155:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 109,
+        "src": "60:687:2"
+      }
+    ],
+    "src": "0:747:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/CoreLibrary.sol",
+    "exportedSymbols": {
+      "CoreLibrary": [
+        108
+      ]
+    },
+    "id": 109,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:2"
+      },
+      {
+        "id": 8,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "25:33:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 108,
+        "linearizedBaseContracts": [
+          108
+        ],
+        "name": "CoreLibrary",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "CoreLibrary.Account",
+            "id": 14,
+            "members": [
+              {
+                "constant": false,
+                "id": 10,
+                "mutability": "mutable",
+                "name": "vaultCounter",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 14,
+                "src": "103:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "103:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13,
+                "mutability": "mutable",
+                "name": "vaults",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 14,
+                "src": "127:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Vault_$19_storage_$dyn_storage_ptr",
+                  "typeString": "struct CoreLibrary.Vault[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 11,
+                    "name": "Vault",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 19,
+                    "src": "127:5:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                      "typeString": "struct CoreLibrary.Vault"
+                    }
+                  },
+                  "id": 12,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "127:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Vault_$19_storage_$dyn_storage_ptr",
+                    "typeString": "struct CoreLibrary.Vault[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Account",
+            "nodeType": "StructDefinition",
+            "scope": 108,
+            "src": "84:61:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "CoreLibrary.Vault",
+            "id": 19,
+            "members": [
+              {
+                "constant": false,
+                "id": 16,
+                "mutability": "mutable",
+                "name": "a",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 19,
+                "src": "167:9:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 15,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "167:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18,
+                "mutability": "mutable",
+                "name": "b",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 19,
+                "src": "182:9:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 17,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "182:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Vault",
+            "nodeType": "StructDefinition",
+            "scope": 108,
+            "src": "148:48:2",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 57,
+              "nodeType": "Block",
+              "src": "287:129:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 34,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 31,
+                            "name": "_self",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 21,
+                            "src": "299:5:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                              "typeString": "struct CoreLibrary.Account storage pointer"
+                            }
+                          },
+                          "id": 32,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "vaultCounter",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 10,
+                          "src": "299:18:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 33,
+                          "name": "id",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 23,
+                          "src": "321:2:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "299:24:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6572726f722031",
+                        "id": 35,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "325:9:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_976b50a4d3e8b21ce35b59a1def9344af55038e9451235123e21ac3eb636b457",
+                          "typeString": "literal_string \"error 1\""
+                        },
+                        "value": "error 1"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_976b50a4d3e8b21ce35b59a1def9344af55038e9451235123e21ac3eb636b457",
+                          "typeString": "literal_string \"error 1\""
+                        }
+                      ],
+                      "id": 30,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "291:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 36,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "291:44:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 37,
+                  "nodeType": "ExpressionStatement",
+                  "src": "291:44:2"
+                },
+                {
+                  "assignments": [
+                    39
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 39,
+                      "mutability": "mutable",
+                      "name": "vault",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 57,
+                      "src": "342:19:2",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                        "typeString": "struct CoreLibrary.Vault"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 38,
+                        "name": "Vault",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 19,
+                        "src": "342:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                          "typeString": "struct CoreLibrary.Vault"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 44,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 40,
+                        "name": "_self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "364:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                          "typeString": "struct CoreLibrary.Account storage pointer"
+                        }
+                      },
+                      "id": 41,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "vaults",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13,
+                      "src": "364:12:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Vault_$19_storage_$dyn_storage",
+                        "typeString": "struct CoreLibrary.Vault storage ref[] storage ref"
+                      }
+                    },
+                    "id": 43,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 42,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 23,
+                      "src": "377:2:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "364:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$19_storage",
+                      "typeString": "struct CoreLibrary.Vault storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "342:38:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 49,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 45,
+                        "name": "vault",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39,
+                        "src": "385:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                          "typeString": "struct CoreLibrary.Vault storage pointer"
+                        }
+                      },
+                      "id": 47,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "a",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 16,
+                      "src": "385:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 48,
+                      "name": "a",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 25,
+                      "src": "395:1:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "385:11:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 50,
+                  "nodeType": "ExpressionStatement",
+                  "src": "385:11:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 55,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 51,
+                        "name": "vault",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39,
+                        "src": "400:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                          "typeString": "struct CoreLibrary.Vault storage pointer"
+                        }
+                      },
+                      "id": 53,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "b",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 18,
+                      "src": "400:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 54,
+                      "name": "b",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27,
+                      "src": "410:1:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "400:11:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 56,
+                  "nodeType": "ExpressionStatement",
+                  "src": "400:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "86389507",
+            "id": 58,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateVault",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21,
+                  "mutability": "mutable",
+                  "name": "_self",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 58,
+                  "src": "221:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                    "typeString": "struct CoreLibrary.Account"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 20,
+                    "name": "Account",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 14,
+                    "src": "221:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                      "typeString": "struct CoreLibrary.Account"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 23,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 58,
+                  "src": "244:10:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "244:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25,
+                  "mutability": "mutable",
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 58,
+                  "src": "256:9:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 24,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "256:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27,
+                  "mutability": "mutable",
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 58,
+                  "src": "267:9:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "267:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "220:57:2"
+            },
+            "returnParameters": {
+              "id": 29,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "287:0:2"
+            },
+            "scope": 108,
+            "src": "200:216:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 87,
+              "nodeType": "Block",
+              "src": "492:93:2",
+              "statements": [
+                {
+                  "assignments": [
+                    68
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 68,
+                      "mutability": "mutable",
+                      "name": "vault",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 87,
+                      "src": "496:18:2",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                        "typeString": "struct CoreLibrary.Vault"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 67,
+                        "name": "Vault",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 19,
+                        "src": "496:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                          "typeString": "struct CoreLibrary.Vault"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 73,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 70,
+                        "name": "a",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 62,
+                        "src": "523:1:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 71,
+                        "name": "b",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 64,
+                        "src": "526:1:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 69,
+                      "name": "Vault",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 19,
+                      "src": "517:5:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Vault_$19_storage_ptr_$",
+                        "typeString": "type(struct CoreLibrary.Vault storage pointer)"
+                      }
+                    },
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "517:11:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                      "typeString": "struct CoreLibrary.Vault memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "496:32:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 77,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "533:20:2",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 74,
+                        "name": "_self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60,
+                        "src": "533:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                          "typeString": "struct CoreLibrary.Account storage pointer"
+                        }
+                      },
+                      "id": 76,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "vaultCounter",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10,
+                      "src": "533:18:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 78,
+                  "nodeType": "ExpressionStatement",
+                  "src": "533:20:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 84,
+                        "name": "vault",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 68,
+                        "src": "575:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                          "typeString": "struct CoreLibrary.Vault memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                          "typeString": "struct CoreLibrary.Vault memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 79,
+                          "name": "_self",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 60,
+                          "src": "557:5:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                            "typeString": "struct CoreLibrary.Account storage pointer"
+                          }
+                        },
+                        "id": 82,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "vaults",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 13,
+                        "src": "557:12:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Vault_$19_storage_$dyn_storage",
+                          "typeString": "struct CoreLibrary.Vault storage ref[] storage ref"
+                        }
+                      },
+                      "id": 83,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "557:17:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Vault_$19_storage_$returns$__$",
+                        "typeString": "function (struct CoreLibrary.Vault storage ref)"
+                      }
+                    },
+                    "id": 85,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "557:24:2",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 86,
+                  "nodeType": "ExpressionStatement",
+                  "src": "557:24:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "3de861f0",
+            "id": 88,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initVault",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 65,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60,
+                  "mutability": "mutable",
+                  "name": "_self",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 88,
+                  "src": "438:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                    "typeString": "struct CoreLibrary.Account"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 59,
+                    "name": "Account",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 14,
+                    "src": "438:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                      "typeString": "struct CoreLibrary.Account"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "mutability": "mutable",
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 88,
+                  "src": "461:9:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "461:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 64,
+                  "mutability": "mutable",
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 88,
+                  "src": "472:9:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 63,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "472:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "437:45:2"
+            },
+            "returnParameters": {
+              "id": 66,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "492:0:2"
+            },
+            "scope": 108,
+            "src": "419:166:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 106,
+              "nodeType": "Block",
+              "src": "678:65:2",
+              "statements": [
+                {
+                  "assignments": [
+                    98
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 98,
+                      "mutability": "mutable",
+                      "name": "vault",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 106,
+                      "src": "684:18:2",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                        "typeString": "struct CoreLibrary.Vault"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 97,
+                        "name": "Vault",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 19,
+                        "src": "684:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                          "typeString": "struct CoreLibrary.Vault"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 103,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 99,
+                        "name": "_self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 90,
+                        "src": "705:5:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                          "typeString": "struct CoreLibrary.Account storage pointer"
+                        }
+                      },
+                      "id": 100,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "vaults",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13,
+                      "src": "705:12:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Vault_$19_storage_$dyn_storage",
+                        "typeString": "struct CoreLibrary.Vault storage ref[] storage ref"
+                      }
+                    },
+                    "id": 102,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 101,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 92,
+                      "src": "718:2:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "705:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$19_storage",
+                      "typeString": "struct CoreLibrary.Vault storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "684:37:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 104,
+                    "name": "vault",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 98,
+                    "src": "733:5:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                      "typeString": "struct CoreLibrary.Vault memory"
+                    }
+                  },
+                  "functionReturnParameters": 96,
+                  "id": 105,
+                  "nodeType": "Return",
+                  "src": "726:12:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "c9f76ae4",
+            "id": 107,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVault",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 93,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 90,
+                  "mutability": "mutable",
+                  "name": "_self",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 107,
+                  "src": "606:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                    "typeString": "struct CoreLibrary.Account"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 89,
+                    "name": "Account",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 14,
+                    "src": "606:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Account_$14_storage_ptr",
+                      "typeString": "struct CoreLibrary.Account"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 92,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 107,
+                  "src": "629:10:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 91,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "629:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "605:35:2"
+            },
+            "returnParameters": {
+              "id": 96,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 95,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 107,
+                  "src": "664:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Vault_$19_memory_ptr",
+                    "typeString": "struct CoreLibrary.Vault"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 94,
+                    "name": "Vault",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 19,
+                    "src": "664:5:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$19_storage_ptr",
+                      "typeString": "struct CoreLibrary.Vault"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "663:14:2"
+            },
+            "scope": 108,
+            "src": "588:155:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 109,
+        "src": "60:687:2"
+      }
+    ],
+    "src": "0:747:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-07-02T11:13:16.556Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

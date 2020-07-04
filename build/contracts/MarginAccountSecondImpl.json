@@ -1,0 +1,168 @@
+{
+  "contractName": "MarginAccountSecondImpl",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/haythem96/Projects/testStruct/contracts/MarginAccountSecondImpl.sol\":\"MarginAccountSecondImpl\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/haythem96/Projects/testStruct/contracts/Controller.sol\":{\"keccak256\":\"0xcd45945b37e336483d48b9647340e8ab3a9cff49f268a7191189b2510e0e53f9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d77afbfc9e856b157c41cd4e8d397da6b294c1aed778ed5ef95572926b2bd7c5\",\"dweb:/ipfs/QmY9CZb7zbKffUBAUwgnqgGYc137cCekWKXjdvdoFuhmdq\"]},\"/Users/haythem96/Projects/testStruct/contracts/MarginAccountLibSecondImpl.sol\":{\"keccak256\":\"0x3303016588983f1f0fd83deb5ba99df3ad343106e84476b0b3dd7f51641a5c6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a7afffe8cb8548bf4caae1b4919da692d788878e2fbdb88814f3c5a098954326\",\"dweb:/ipfs/QmebDkYV2DRv92d4fqQK5sdndz7tQuqQU67SJZxaGf4n3U\"]},\"/Users/haythem96/Projects/testStruct/contracts/MarginAccountSecondImpl.sol\":{\"keccak256\":\"0xd617d8804d13184414214d7770167a3393c83263e97ebc5b4b204b73ee33cf6f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fa40964ae103de123b6ca06f8db734354199e8c517fe99f4b8708998da6aa760\",\"dweb:/ipfs/QmeJLNjj3XskBRBYPLGoo7fMmorxAe9kPDGfP2Q7uL9irF\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220ffdee33665bf3f3de576cb8fae7169ecb374c05cf5d75d45fc81aba7044d805a64736f6c63430006090033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220ffdee33665bf3f3de576cb8fae7169ecb374c05cf5d75d45fc81aba7044d805a64736f6c63430006090033",
+  "sourceMap": "163:2217:2:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "163:2217:2:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.9;\n\n\npragma experimental ABIEncoderV2;\n\nimport \"./MarginAccountLibSecondImpl.sol\";\nimport \"./Controller.sol\";\n\ncontract MarginAccountSecondImpl {\n    /*\n    \n    using MarginAccountLibSecondImpl for MarginAccountLibSecondImpl.Account;\n    using MarginAccountLibSecondImpl for MarginAccountLibSecondImpl.Vault;\n\n    Controller controller;\n\n    mapping(address => MarginAccountLibSecondImpl.Account) internal accounts;\n\n    constructor(address _controller) public {\n        controller = Controller(_controller);\n    }\n\n    function openVault(\n        address _user,\n\t\taddress[] memory _shortAssets,\n\t\taddress[] memory _longAssets,\n\t\taddress[] memory _collAssets,\n\t\tuint256[] memory _shortAmounts,\n\t\tuint256[] memory _longAmounts,\n\t\tuint256[] memory _collAmounts\n    ) public {\n        require(msg.sender == address(controller), \"controller auth failed\");\n        require(_shortAssets.length == _shortAmounts.length, \"error length\");\n        require(_longAssets.length == _longAmounts.length, \"error length\");\n        require(_collAssets.length == _collAmounts.length, \"error length\");\n\n        //MarginAccountLibSecondImpl.Account storage account = accounts[_user];\n\n        accounts[_user].updateOnOpen(\n            _shortAssets,\n            _longAssets,\n            _collAssets,\n            _shortAmounts,\n            _longAmounts,\n            _collAmounts\n        );\n    }\n\n    function closeVault(\n        address _user,\n        uint256 _vaultId,\n        address[] memory _shortAssets,\n        address[] memory _longAssets,\n        address[] memory _collAssets,\n        uint256[] memory _shortAmounts,\n        uint256[] memory _longAmounts,\n        uint256[] memory _collAmounts\n    ) external {\n        require(_shortAssets.length == _shortAmounts.length, \"error length\");\n        require(_longAssets.length == _longAmounts.length, \"error length\");\n        require(_collAssets.length == _collAmounts.length, \"error length\");\n\n        MarginAccountLib.Account storage account = accounts[_user];\n\n        require(account.vaultCounter >= _vaultId, \"error vault id\");\n\n        accountVaults[_user][_vaultId].updateOnClose();\n    }\n\n    function getVault(address _user, uint256 _vaultId) external view returns (MarginAccountLib.Vault memory) {\n\t\tMarginAccountLib.Vault memory vault = _self.vaults[id];\n\n\t\treturn vault;\n\t}\n    */\n}\n",
+  "sourcePath": "/Users/haythem96/Projects/testStruct/contracts/MarginAccountSecondImpl.sol",
+  "ast": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/MarginAccountSecondImpl.sol",
+    "exportedSymbols": {
+      "MarginAccountSecondImpl": [
+        13
+      ]
+    },
+    "id": 14,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:2"
+      },
+      {
+        "id": 10,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:33:2"
+      },
+      {
+        "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/MarginAccountLibSecondImpl.sol",
+        "file": "./MarginAccountLibSecondImpl.sol",
+        "id": 11,
+        "nodeType": "ImportDirective",
+        "scope": 14,
+        "sourceUnit": 8,
+        "src": "92:42:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/Controller.sol",
+        "file": "./Controller.sol",
+        "id": 12,
+        "nodeType": "ImportDirective",
+        "scope": 14,
+        "sourceUnit": 4,
+        "src": "135:26:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 13,
+        "linearizedBaseContracts": [
+          13
+        ],
+        "name": "MarginAccountSecondImpl",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 14,
+        "src": "163:2217:2"
+      }
+    ],
+    "src": "32:2349:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/MarginAccountSecondImpl.sol",
+    "exportedSymbols": {
+      "MarginAccountSecondImpl": [
+        13
+      ]
+    },
+    "id": 14,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:2"
+      },
+      {
+        "id": 10,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:33:2"
+      },
+      {
+        "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/MarginAccountLibSecondImpl.sol",
+        "file": "./MarginAccountLibSecondImpl.sol",
+        "id": 11,
+        "nodeType": "ImportDirective",
+        "scope": 14,
+        "sourceUnit": 8,
+        "src": "92:42:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/Controller.sol",
+        "file": "./Controller.sol",
+        "id": 12,
+        "nodeType": "ImportDirective",
+        "scope": 14,
+        "sourceUnit": 4,
+        "src": "135:26:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 13,
+        "linearizedBaseContracts": [
+          13
+        ],
+        "name": "MarginAccountSecondImpl",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 14,
+        "src": "163:2217:2"
+      }
+    ],
+    "src": "32:2349:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-07-04T00:14:13.039Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

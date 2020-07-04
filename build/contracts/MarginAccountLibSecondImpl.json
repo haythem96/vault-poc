@@ -1,0 +1,124 @@
+{
+  "contractName": "MarginAccountLibSecondImpl",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/haythem96/Projects/testStruct/contracts/MarginAccountLibSecondImpl.sol\":\"MarginAccountLibSecondImpl\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/haythem96/Projects/testStruct/contracts/MarginAccountLibSecondImpl.sol\":{\"keccak256\":\"0x3303016588983f1f0fd83deb5ba99df3ad343106e84476b0b3dd7f51641a5c6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a7afffe8cb8548bf4caae1b4919da692d788878e2fbdb88814f3c5a098954326\",\"dweb:/ipfs/QmebDkYV2DRv92d4fqQK5sdndz7tQuqQU67SJZxaGf4n3U\"]}},\"version\":1}",
+  "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212200358e7810ce84befc3459bb04a6a370408c8414cb45243fc5f01bf0978db71e764736f6c63430006090033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212200358e7810ce84befc3459bb04a6a370408c8414cb45243fc5f01bf0978db71e764736f6c63430006090033",
+  "sourceMap": "92:1841:3:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "92:1841:3:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.9;\n\n\npragma experimental ABIEncoderV2;\n\nlibrary MarginAccountLibSecondImpl {\n\n\t/*struct Account {\n\t\tuint256 vaultCounter;\n        Vault[] vaults;\n\t}\n\n\tstruct Vault {\n\t\tmapping(address => uint256) shortAmount;\n\t\tmapping(address => uint256) longAmount;\n\t\tmapping(address => uint256) collateralAmount;\n\t\taddress[] shortAssets;\n\t\taddress[] longAssets;\n\t\taddress[] collAssets;\n  \t}\n\t\n\tfunction updateOnOpen(\n\t\tAccount storage _self,\n\t\taddress[] calldata _shortAssets,\n\t\taddress[] calldata _longAssets,\n\t\taddress[] calldata _collAssets,\n\t\tuint256[] calldata _shortAmounts,\n\t\tuint256[] calldata _longAmounts,\n\t\tuint256[] calldata _collAmounts\n\t) internal {\n        MarginAccountLibSecondImpl.Vault storage vault = _self.vaults[_self.vaultCounter];\n\n\t\tfor(uint8 i = 0; i<_shortAssets.length; i++) {\n\t\t\tvault.shortAmount[_shortAssets[i]] = _shortAmounts[i];\n\t\t}\n\n\t\tfor(uint8 i = 0; i<_longAssets.length; i++) {\n\t\t\tvault.longAmount[_longAssets[i]] = _longAmounts[i];\n\t\t}\n\n\t\tfor(uint8 i = 0; i<_collAssets.length; i++) {\n\t\t\tvault.collateralAmount[_collAssets[i]] = _collAmounts[i];\n\t\t}\n\n\t\tvault.shortAssets = _shortAssets;\n\t\tvault.longAssets = _longAssets;\n\t\tvault.collAssets = _collAssets;\n        \n        _self.vaultCounter++;\n        _self.vaults.push(vault);\n\t}\n\n\tfunction updateOnClose(\n\t\tVault storage _self\n\t) internal {\n\t\tfor(uint8 i = 0; i<_self.shortAssets.length; i++) {\n\t\t\t_self.shortAmount[_self.shortAssets[i]] = 0;\n\t\t}\n\n\t\tfor(uint8 i = 0; i<_self.longAssets.length; i++) {\n\t\t\t_self.shortAmount[_self.longAssets[i]] = 0;\n\t\t}\n\n\t\tfor(uint8 i = 0; i<_self.collAssets.length; i++) {\n\t\t\t_self.shortAmount[_self.collAssets[i]] = 0;\n\t\t}\n\n\t\taddress[] memory emptyAddresses;\n\t\t_self.shortAssets = emptyAddresses;\n\t\t_self.longAssets = emptyAddresses;\n\t\t_self.collAssets = emptyAddresses;\n  \t}\n\n\tfunction setReserveId(\n\t\tAccount storage _self\n\t) internal {\n\t\t_self.vaultCounter++;\n\t}*/\n\n}",
+  "sourcePath": "/Users/haythem96/Projects/testStruct/contracts/MarginAccountLibSecondImpl.sol",
+  "ast": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/MarginAccountLibSecondImpl.sol",
+    "exportedSymbols": {
+      "MarginAccountLibSecondImpl": [
+        475
+      ]
+    },
+    "id": 476,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 473,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:3"
+      },
+      {
+        "id": 474,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:33:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 475,
+        "linearizedBaseContracts": [
+          475
+        ],
+        "name": "MarginAccountLibSecondImpl",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 476,
+        "src": "92:1841:3"
+      }
+    ],
+    "src": "32:1901:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/MarginAccountLibSecondImpl.sol",
+    "exportedSymbols": {
+      "MarginAccountLibSecondImpl": [
+        475
+      ]
+    },
+    "id": 476,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 473,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:3"
+      },
+      {
+        "id": 474,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:33:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 475,
+        "linearizedBaseContracts": [
+          475
+        ],
+        "name": "MarginAccountLibSecondImpl",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 476,
+        "src": "92:1841:3"
+      }
+    ],
+    "src": "32:1901:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-07-03T21:32:07.600Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

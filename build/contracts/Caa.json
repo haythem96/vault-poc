@@ -1,0 +1,106 @@
+{
+  "contractName": "Caa",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/haythem96/Projects/testStruct/contracts/Caa.sol\":\"Caa\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/haythem96/Projects/testStruct/contracts/Caa.sol\":{\"keccak256\":\"0x46a1f83aaafe750a4a753f686ed95d496c0c1d01639e01123fad9d7dda20c0a8\",\"urls\":[\"bzz-raw://d1b3f4dc92c0bd7cb0e86a8a374ecd3d6534690998171ff40f0aa1a3c12c225a\",\"dweb:/ipfs/QmZJPFXcF6hxSiEvNM99cjggp3CK6A4yGzgwNTXC2wXwnA\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220e21024a1dca8f4a6d80f29cbef0bb9a73132e32864284f486fb753d5d32f4cab64736f6c63430006090033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220e21024a1dca8f4a6d80f29cbef0bb9a73132e32864284f486fb753d5d32f4cab64736f6c63430006090033",
+  "sourceMap": "25:17:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "25:17:0:-:0;;;;;",
+  "source": "pragma solidity 0.6.9;\n\n\ncontract Caa {\n\n}\n",
+  "sourcePath": "/Users/haythem96/Projects/testStruct/contracts/Caa.sol",
+  "ast": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/Caa.sol",
+    "exportedSymbols": {
+      "Caa": [
+        2
+      ]
+    },
+    "id": 3,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2,
+        "linearizedBaseContracts": [
+          2
+        ],
+        "name": "Caa",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3,
+        "src": "25:17:0"
+      }
+    ],
+    "src": "0:43:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/Caa.sol",
+    "exportedSymbols": {
+      "Caa": [
+        2
+      ]
+    },
+    "id": 3,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2,
+        "linearizedBaseContracts": [
+          2
+        ],
+        "name": "Caa",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3,
+        "src": "25:17:0"
+      }
+    ],
+    "src": "0:43:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-07-02T11:13:16.554Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
