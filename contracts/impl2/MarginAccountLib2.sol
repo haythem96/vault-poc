@@ -20,13 +20,14 @@ library MarginAccountLib2 {
   	}
 
 	function setReserveId(
-		Account storage _self
+		Account storage _account
 	) internal {
-		_self.vaultCounter++;
+		_account.vaultCounter++;
 	}
-	
+
 	function updateOnOpen(
 		Vault storage _self,
+		Account storage _account,
 		address[] memory _shortAssets,
 		address[] memory _longAssets,
 		address[] memory _collAssets,
@@ -34,19 +35,21 @@ library MarginAccountLib2 {
 		uint256[] memory _longAmounts,
 		uint256[] memory _collAmounts
 	) internal {
-		for(uint8 i = 0; i<_shortAssets.length; i++) {
-			_self.shortAssets[i] = _shortAssets[i];
-			_self.shortAmounts[i] = _shortAmounts[i];
+		for(uint256 i = 0; i<_shortAssets.length; i++) {
+			_self.shortAssets.push(_shortAssets[i]);
+			_self.shortAmounts.push(_shortAmounts[i]);
 		}
 
-		for(uint8 i = 0; i<_longAssets.length; i++) {
-			_self.longAssets[i] = _longAssets[i];
-			_self.longAmounts[i] = _longAmounts[i];
+		for(uint256 i = 0; i<_longAssets.length; i++) {
+			_self.longAssets.push(_longAssets[i]);
+			_self.longAmounts.push(_longAmounts[i]);
 		}
 
-		for(uint8 i = 0; i<_collAssets.length; i++) {
-			_self.collAssets[i] = _collAssets[i];
-			_self.collAmounts[i] = _collAmounts[i];
+		for(uint256 i = 0; i<_collAssets.length; i++) {
+			_self.collAssets.push(_collAssets[i]);
+			_self.collAmounts.push(_collAmounts[i]);
 		}
+
+		setReserveId(_account);
 	}
 }

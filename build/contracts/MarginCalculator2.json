@@ -1,0 +1,736 @@
+{
+  "contractName": "MarginCalculator2",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address[]",
+              "name": "shortAssets",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "longAssets",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "collAssets",
+              "type": "address[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "shortAmounts",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "longAmounts",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "collAmounts",
+              "type": "uint256[]"
+            }
+          ],
+          "internalType": "struct MarginAccountLib2.Vault",
+          "name": "_vault",
+          "type": "tuple"
+        }
+      ],
+      "name": "marginRequirement",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"address[]\",\"name\":\"shortAssets\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"longAssets\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"collAssets\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"shortAmounts\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"longAmounts\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"collAmounts\",\"type\":\"uint256[]\"}],\"internalType\":\"struct MarginAccountLib2.Vault\",\"name\":\"_vault\",\"type\":\"tuple\"}],\"name\":\"marginRequirement\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/haythem96/Projects/testStruct/contracts/impl2/MarginCalculator2.sol\":\"MarginCalculator2\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/haythem96/Projects/testStruct/contracts/impl2/MarginAccountLib2.sol\":{\"keccak256\":\"0x0f701f5e0706e559aac7af7efc2d38dae6b71f02c4e36a061aaf6eeb9b87ee99\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://250160e93e31f968e9b9094e4adf479ee60b273e4ad42de1536da9d5f3b65306\",\"dweb:/ipfs/QmSk64aCJHmXnKDVn9Rt6AcTyTid3Dqx1eYxSQpGTpbPmN\"]},\"/Users/haythem96/Projects/testStruct/contracts/impl2/MarginCalculator2.sol\":{\"keccak256\":\"0xdc6e8b796abebed8371b0c2c2721a43886253fe064c510e35b00e4f41a48334e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f6c4cd885e8e394467728ac65c233a8f4e6cb1dbf6af8e8e6ee1f0cb8b116895\",\"dweb:/ipfs/QmUBwGDTUgXiGgSQAm71sr9xWD7ggEFiY2Sg6GQgNMsXeQ\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610508806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063e3f6320414610030575b600080fd5b61004a6004803603810190610045919061030f565b610060565b60405161005791906103bf565b60405180910390f35b60006001826000015151146100aa576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016100a19061039f565b60405180910390fd5b60009050919050565b6000813590506100c2816104a4565b92915050565b600082601f8301126100d957600080fd5b81356100ec6100e782610407565b6103da565b9150818183526020840193506020810190508385602084028201111561011157600080fd5b60005b83811015610141578161012788826100b3565b845260208401935060208301925050600181019050610114565b5050505092915050565b600082601f83011261015c57600080fd5b813561016f61016a8261042f565b6103da565b9150818183526020840193506020810190508385602084028201111561019457600080fd5b60005b838110156101c457816101aa88826102fa565b845260208401935060208301925050600181019050610197565b5050505092915050565b600060c082840312156101e057600080fd5b6101ea60c06103da565b9050600082013567ffffffffffffffff81111561020657600080fd5b610212848285016100c8565b600083015250602082013567ffffffffffffffff81111561023257600080fd5b61023e848285016100c8565b602083015250604082013567ffffffffffffffff81111561025e57600080fd5b61026a848285016100c8565b604083015250606082013567ffffffffffffffff81111561028a57600080fd5b6102968482850161014b565b606083015250608082013567ffffffffffffffff8111156102b657600080fd5b6102c28482850161014b565b60808301525060a082013567ffffffffffffffff8111156102e257600080fd5b6102ee8482850161014b565b60a08301525092915050565b600081359050610309816104bb565b92915050565b60006020828403121561032157600080fd5b600082013567ffffffffffffffff81111561033b57600080fd5b610347848285016101ce565b91505092915050565b600061035d601983610457565b91507f6572726f722073686f727420617373657473206c656e677468000000000000006000830152602082019050919050565b6103998161049a565b82525050565b600060208201905081810360008301526103b881610350565b9050919050565b60006020820190506103d46000830184610390565b92915050565b6000604051905081810181811067ffffffffffffffff821117156103fd57600080fd5b8060405250919050565b600067ffffffffffffffff82111561041e57600080fd5b602082029050602081019050919050565b600067ffffffffffffffff82111561044657600080fd5b602082029050602081019050919050565b600082825260208201905092915050565b60006104738261047a565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6104ad81610468565b81146104b857600080fd5b50565b6104c48161049a565b81146104cf57600080fd5b5056fea2646970667358221220c6d97485487aab1b6a50c12643ffa2468e775f746eb87090d6864ec557ddc92064736f6c63430006090033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063e3f6320414610030575b600080fd5b61004a6004803603810190610045919061030f565b610060565b60405161005791906103bf565b60405180910390f35b60006001826000015151146100aa576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016100a19061039f565b60405180910390fd5b60009050919050565b6000813590506100c2816104a4565b92915050565b600082601f8301126100d957600080fd5b81356100ec6100e782610407565b6103da565b9150818183526020840193506020810190508385602084028201111561011157600080fd5b60005b83811015610141578161012788826100b3565b845260208401935060208301925050600181019050610114565b5050505092915050565b600082601f83011261015c57600080fd5b813561016f61016a8261042f565b6103da565b9150818183526020840193506020810190508385602084028201111561019457600080fd5b60005b838110156101c457816101aa88826102fa565b845260208401935060208301925050600181019050610197565b5050505092915050565b600060c082840312156101e057600080fd5b6101ea60c06103da565b9050600082013567ffffffffffffffff81111561020657600080fd5b610212848285016100c8565b600083015250602082013567ffffffffffffffff81111561023257600080fd5b61023e848285016100c8565b602083015250604082013567ffffffffffffffff81111561025e57600080fd5b61026a848285016100c8565b604083015250606082013567ffffffffffffffff81111561028a57600080fd5b6102968482850161014b565b606083015250608082013567ffffffffffffffff8111156102b657600080fd5b6102c28482850161014b565b60808301525060a082013567ffffffffffffffff8111156102e257600080fd5b6102ee8482850161014b565b60a08301525092915050565b600081359050610309816104bb565b92915050565b60006020828403121561032157600080fd5b600082013567ffffffffffffffff81111561033b57600080fd5b610347848285016101ce565b91505092915050565b600061035d601983610457565b91507f6572726f722073686f727420617373657473206c656e677468000000000000006000830152602082019050919050565b6103998161049a565b82525050565b600060208201905081810360008301526103b881610350565b9050919050565b60006020820190506103d46000830184610390565b92915050565b6000604051905081810181811067ffffffffffffffff821117156103fd57600080fd5b8060405250919050565b600067ffffffffffffffff82111561041e57600080fd5b602082029050602081019050919050565b600067ffffffffffffffff82111561044657600080fd5b602082029050602081019050919050565b600082825260208201905092915050565b60006104738261047a565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6104ad81610468565b81146104b857600080fd5b50565b6104c48161049a565b81146104cf57600080fd5b5056fea2646970667358221220c6d97485487aab1b6a50c12643ffa2468e775f746eb87090d6864ec557ddc92064736f6c63430006090033",
+  "sourceMap": "127:253:6:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "127:253:6:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;161:216;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;264:7;320:1;291:6;:18;;;:25;:30;283:68;;;;;;;;;;;;;;;;;;;;;;369:1;362:8;;161:216;;;:::o;5:130:-1:-;;85:6;72:20;63:29;;97:33;124:5;97:33;;;57:78;;;;;160:707;;277:3;270:4;262:6;258:17;254:27;244:2;;295:1;292;285:12;244:2;332:6;319:20;354:80;369:64;426:6;369:64;;;354:80;;;345:89;;451:5;476:6;469:5;462:21;506:4;498:6;494:17;484:27;;528:4;523:3;519:14;512:21;;581:6;628:3;620:4;612:6;608:17;603:3;599:27;596:36;593:2;;;645:1;642;635:12;593:2;670:1;655:206;680:6;677:1;674:13;655:206;;;738:3;760:37;793:3;781:10;760:37;;;755:3;748:50;821:4;816:3;812:14;805:21;;849:4;844:3;840:14;833:21;;712:149;702:1;699;695:9;690:14;;655:206;;;659:14;237:630;;;;;;;;893:707;;1010:3;1003:4;995:6;991:17;987:27;977:2;;1028:1;1025;1018:12;977:2;1065:6;1052:20;1087:80;1102:64;1159:6;1102:64;;;1087:80;;;1078:89;;1184:5;1209:6;1202:5;1195:21;1239:4;1231:6;1227:17;1217:27;;1261:4;1256:3;1252:14;1245:21;;1314:6;1361:3;1353:4;1345:6;1341:17;1336:3;1332:27;1329:36;1326:2;;;1378:1;1375;1368:12;1326:2;1403:1;1388:206;1413:6;1410:1;1407:13;1388:206;;;1471:3;1493:37;1526:3;1514:10;1493:37;;;1488:3;1481:50;1554:4;1549:3;1545:14;1538:21;;1582:4;1577:3;1573:14;1566:21;;1445:149;1435:1;1432;1428:9;1423:14;;1388:206;;;1392:14;970:630;;;;;;;;1645:1749;;1756:4;1744:9;1739:3;1735:19;1731:30;1728:2;;;1774:1;1771;1764:12;1728:2;1792:20;1807:4;1792:20;;;1783:29;;1897:1;1886:9;1882:17;1869:31;1920:18;1912:6;1909:30;1906:2;;;1952:1;1949;1942:12;1906:2;1987:74;2057:3;2048:6;2037:9;2033:22;1987:74;;;1980:4;1973:5;1969:16;1962:100;1822:251;2157:2;2146:9;2142:18;2129:32;2181:18;2173:6;2170:30;2167:2;;;2213:1;2210;2203:12;2167:2;2248:74;2318:3;2309:6;2298:9;2294:22;2248:74;;;2241:4;2234:5;2230:16;2223:100;2083:251;2418:2;2407:9;2403:18;2390:32;2442:18;2434:6;2431:30;2428:2;;;2474:1;2471;2464:12;2428:2;2509:74;2579:3;2570:6;2559:9;2555:22;2509:74;;;2502:4;2495:5;2491:16;2484:100;2344:251;2681:2;2670:9;2666:18;2653:32;2705:18;2697:6;2694:30;2691:2;;;2737:1;2734;2727:12;2691:2;2772:74;2842:3;2833:6;2822:9;2818:22;2772:74;;;2765:4;2758:5;2754:16;2747:100;2605:253;2943:3;2932:9;2928:19;2915:33;2968:18;2960:6;2957:30;2954:2;;;3000:1;2997;2990:12;2954:2;3035:74;3105:3;3096:6;3085:9;3081:22;3035:74;;;3028:4;3021:5;3017:16;3010:100;2868:253;3206:3;3195:9;3191:19;3178:33;3231:18;3223:6;3220:30;3217:2;;;3263:1;3260;3253:12;3217:2;3298:74;3368:3;3359:6;3348:9;3344:22;3298:74;;;3291:4;3284:5;3280:16;3273:100;3131:253;1722:1672;;;;;3401:130;;3481:6;3468:20;3459:29;;3493:33;3520:5;3493:33;;;3453:78;;;;;3538:371;;3664:2;3652:9;3643:7;3639:23;3635:32;3632:2;;;3680:1;3677;3670:12;3632:2;3743:1;3732:9;3728:17;3715:31;3766:18;3758:6;3755:30;3752:2;;;3798:1;3795;3788:12;3752:2;3818:75;3885:7;3876:6;3865:9;3861:22;3818:75;;;3808:85;;3694:205;3626:283;;;;;3917:325;;4077:67;4141:2;4136:3;4077:67;;;4070:74;;4177:27;4173:1;4168:3;4164:11;4157:48;4233:2;4228:3;4224:12;4217:19;;4063:179;;;;4250:113;4333:24;4351:5;4333:24;;;4328:3;4321:37;4315:48;;;4370:416;;4570:2;4559:9;4555:18;4547:26;;4620:9;4614:4;4610:20;4606:1;4595:9;4591:17;4584:47;4645:131;4771:4;4645:131;;;4637:139;;4541:245;;;;4793:222;;4920:2;4909:9;4905:18;4897:26;;4934:71;5002:1;4991:9;4987:17;4978:6;4934:71;;;4891:124;;;;;5022:256;;5084:2;5078:9;5068:19;;5122:4;5114:6;5110:17;5221:6;5209:10;5206:22;5185:18;5173:10;5170:34;5167:62;5164:2;;;5242:1;5239;5232:12;5164:2;5262:10;5258:2;5251:22;5062:216;;;;;5285:304;;5444:18;5436:6;5433:30;5430:2;;;5476:1;5473;5466:12;5430:2;5511:4;5503:6;5499:17;5491:25;;5574:4;5568;5564:15;5556:23;;5367:222;;;;5596:304;;5755:18;5747:6;5744:30;5741:2;;;5787:1;5784;5777:12;5741:2;5822:4;5814:6;5810:17;5802:25;;5885:4;5879;5875:15;5867:23;;5678:222;;;;5908:163;;6023:6;6018:3;6011:19;6060:4;6055:3;6051:14;6036:29;;6004:67;;;;;6079:91;;6141:24;6159:5;6141:24;;;6130:35;;6124:46;;;;6177:121;;6250:42;6243:5;6239:54;6228:65;;6222:76;;;;6305:72;;6367:5;6356:16;;6350:27;;;;6384:117;6453:24;6471:5;6453:24;;;6446:5;6443:35;6433:2;;6492:1;6489;6482:12;6433:2;6427:74;;6508:117;6577:24;6595:5;6577:24;;;6570:5;6567:35;6557:2;;6616:1;6613;6606:12;6557:2;6551:74;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.9;\n\n\npragma experimental ABIEncoderV2;\n\nimport \"./MarginAccountLib2.sol\";\n\ncontract MarginCalculator2 {\n\n    function marginRequirement(\n        MarginAccountLib2.Vault memory _vault\n    ) external pure returns (uint256) {\n        require(_vault.shortAssets.length == 1, \"error short assets length\");\n\n        return 0;\n    }\n\n}",
+  "sourcePath": "/Users/haythem96/Projects/testStruct/contracts/impl2/MarginCalculator2.sol",
+  "ast": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/impl2/MarginCalculator2.sol",
+    "exportedSymbols": {
+      "MarginCalculator2": [
+        1138
+      ]
+    },
+    "id": 1139,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1116,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:6"
+      },
+      {
+        "id": 1117,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:33:6"
+      },
+      {
+        "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/impl2/MarginAccountLib2.sol",
+        "file": "./MarginAccountLib2.sol",
+        "id": 1118,
+        "nodeType": "ImportDirective",
+        "scope": 1139,
+        "sourceUnit": 1115,
+        "src": "92:33:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1138,
+        "linearizedBaseContracts": [
+          1138
+        ],
+        "name": "MarginCalculator2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1136,
+              "nodeType": "Block",
+              "src": "273:104:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 1130,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 1126,
+                              "name": "_vault",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1120,
+                              "src": "291:6:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Vault_$973_memory_ptr",
+                                "typeString": "struct MarginAccountLib2.Vault memory"
+                              }
+                            },
+                            "id": 1127,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "shortAssets",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 957,
+                            "src": "291:18:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                              "typeString": "address[] memory"
+                            }
+                          },
+                          "id": 1128,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "291:25:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 1129,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "320:1:6",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1_by_1",
+                            "typeString": "int_const 1"
+                          },
+                          "value": "1"
+                        },
+                        "src": "291:30:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6572726f722073686f727420617373657473206c656e677468",
+                        "id": 1131,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "323:27:6",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_fd1d95a500b6e944634f5e857887ad9702e064f21509cee4b77f56704d9a5a37",
+                          "typeString": "literal_string \"error short assets length\""
+                        },
+                        "value": "error short assets length"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_fd1d95a500b6e944634f5e857887ad9702e064f21509cee4b77f56704d9a5a37",
+                          "typeString": "literal_string \"error short assets length\""
+                        }
+                      ],
+                      "id": 1125,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "283:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1132,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "283:68:6",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1133,
+                  "nodeType": "ExpressionStatement",
+                  "src": "283:68:6"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "30",
+                    "id": 1134,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "369:1:6",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "functionReturnParameters": 1124,
+                  "id": 1135,
+                  "nodeType": "Return",
+                  "src": "362:8:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "e3f63204",
+            "id": 1137,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "marginRequirement",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1121,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1120,
+                  "mutability": "mutable",
+                  "name": "_vault",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1137,
+                  "src": "197:37:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Vault_$973_memory_ptr",
+                    "typeString": "struct MarginAccountLib2.Vault"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1119,
+                    "name": "MarginAccountLib2.Vault",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 973,
+                    "src": "197:23:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$973_storage_ptr",
+                      "typeString": "struct MarginAccountLib2.Vault"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "187:53:6"
+            },
+            "returnParameters": {
+              "id": 1124,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1123,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1137,
+                  "src": "264:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1122,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "264:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "263:9:6"
+            },
+            "scope": 1138,
+            "src": "161:216:6",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1139,
+        "src": "127:253:6"
+      }
+    ],
+    "src": "32:348:6"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/impl2/MarginCalculator2.sol",
+    "exportedSymbols": {
+      "MarginCalculator2": [
+        1138
+      ]
+    },
+    "id": 1139,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1116,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:6"
+      },
+      {
+        "id": 1117,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:33:6"
+      },
+      {
+        "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/impl2/MarginAccountLib2.sol",
+        "file": "./MarginAccountLib2.sol",
+        "id": 1118,
+        "nodeType": "ImportDirective",
+        "scope": 1139,
+        "sourceUnit": 1115,
+        "src": "92:33:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1138,
+        "linearizedBaseContracts": [
+          1138
+        ],
+        "name": "MarginCalculator2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1136,
+              "nodeType": "Block",
+              "src": "273:104:6",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 1130,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 1126,
+                              "name": "_vault",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1120,
+                              "src": "291:6:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Vault_$973_memory_ptr",
+                                "typeString": "struct MarginAccountLib2.Vault memory"
+                              }
+                            },
+                            "id": 1127,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "shortAssets",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 957,
+                            "src": "291:18:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                              "typeString": "address[] memory"
+                            }
+                          },
+                          "id": 1128,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "291:25:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 1129,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "320:1:6",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1_by_1",
+                            "typeString": "int_const 1"
+                          },
+                          "value": "1"
+                        },
+                        "src": "291:30:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6572726f722073686f727420617373657473206c656e677468",
+                        "id": 1131,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "323:27:6",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_fd1d95a500b6e944634f5e857887ad9702e064f21509cee4b77f56704d9a5a37",
+                          "typeString": "literal_string \"error short assets length\""
+                        },
+                        "value": "error short assets length"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_fd1d95a500b6e944634f5e857887ad9702e064f21509cee4b77f56704d9a5a37",
+                          "typeString": "literal_string \"error short assets length\""
+                        }
+                      ],
+                      "id": 1125,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "283:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 1132,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "283:68:6",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1133,
+                  "nodeType": "ExpressionStatement",
+                  "src": "283:68:6"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "30",
+                    "id": 1134,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "369:1:6",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "functionReturnParameters": 1124,
+                  "id": 1135,
+                  "nodeType": "Return",
+                  "src": "362:8:6"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "e3f63204",
+            "id": 1137,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "marginRequirement",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1121,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1120,
+                  "mutability": "mutable",
+                  "name": "_vault",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1137,
+                  "src": "197:37:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Vault_$973_memory_ptr",
+                    "typeString": "struct MarginAccountLib2.Vault"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 1119,
+                    "name": "MarginAccountLib2.Vault",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 973,
+                    "src": "197:23:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Vault_$973_storage_ptr",
+                      "typeString": "struct MarginAccountLib2.Vault"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "187:53:6"
+            },
+            "returnParameters": {
+              "id": 1124,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1123,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1137,
+                  "src": "264:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1122,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "264:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "263:9:6"
+            },
+            "scope": 1138,
+            "src": "161:216:6",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1139,
+        "src": "127:253:6"
+      }
+    ],
+    "src": "32:348:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-07-04T17:13:17.690Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

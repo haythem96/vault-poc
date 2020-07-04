@@ -1,0 +1,25 @@
+{
+  "name": "vaultpoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haythem96/vault-poc.git"
+  },
+  "keywords": [
+    "solidity"
+  ],
+  "author": "Haythem Sellami",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haythem96/vault-poc/issues"
+  },
+  "homepage": "https://github.com/haythem96/vault-poc#readme"
+}
