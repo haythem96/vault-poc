@@ -10,7 +10,7 @@ import "./MarginCalculator.sol";
 ///@notice using the commented implementation, we will encounter stack too deep error
 contract Controller {
     
-    using MarginAccountLib for MarginAccountLib.Account;
+    /*using MarginAccountLib for MarginAccountLib.Account;
     using MarginAccountLib for MarginAccountLib.Vault;
 
     MarginCalculator calculator;
@@ -68,21 +68,37 @@ contract Controller {
             _longAmounts,
             _collAmounts
         );
-    }    
+    }
 
-    /*function checkMarginRequirement(
-        MarginAccountLib.RemarginVault memory modificationVault,
+    struct RemarginVault {
+        address[] shortAssets;
+		address[] longAssets;
+		address[] collAssets;
+		uint256[] shortAmounts;
+		uint256[] longAmounts;
+		uint256[] collAmounts;
+        uint8[] shortOp;
+		uint8[] longOp;
+		uint8[] collOp;
+    }
+
+    function checkMarginRequirement(
+        RemarginVault memory modificationVault,
         address _user,
         uint256 _vaultId
     ) external view returns (bool, uint256) {
         MarginAccountLib.Vault memory vault = accountVaults[_user][_vaultId];
 
-        MarginAccountLib.Vault vaultFinalState = updateShort(vault, modificationVault);
-        
-        calculator.marginRequirement(vaultFinalState);
-    }*/
+        for(uint8 i = 0; i<modificationVault.shortOp.length; i++) {
+			vault.shortAmount[modificationVault.shortAssets[i]] += modificationVault.shortAmounts[i];
+		}
 
-    /*function closeVault(
+        vault = MarginAccountLib.updateShort(vault, modificationVault.shortAssets, modificationVault.shortAmounts, modificationVault.shortOp);
+        
+        //calculator.marginRequirement(vaultFinalState);
+    }
+
+    function closeVault(
         address _user,
         uint256 _vaultId
     ) external {

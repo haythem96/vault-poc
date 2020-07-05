@@ -6,7 +6,7 @@ pragma experimental ABIEncoderV2;
 
 library MarginAccountLib {
 
-	struct Account {
+	/*struct Account {
 		uint256 vaultCounter;
 	}
 
@@ -18,18 +18,6 @@ library MarginAccountLib {
 		mapping(address => uint256) longAmount;
 		mapping(address => uint256) collAmount;
   	}
-
-	/*struct RemarginVault {
-        address[] shortAssets;
-		address[] longAssets;
-		address[] collAssets;
-		uint256[] shortAmounts;
-		uint256[] longAmounts;
-		uint256[] collAmounts;
-        uint8[] shortOp;
-		uint8[] longOp;
-		uint8[] collOp;
-    }*/
 
 	function setReserveId(
 		Account storage _self
@@ -95,20 +83,14 @@ library MarginAccountLib {
 		return (_vault.shortAssets, _vault.longAssets, _vault.collAssets, shortAmount, longAmount, collAmount);
 	}
 
-	/*function getVaultFinalState(
-		Vault memory _updateVault,
-		Vault memory _vault
-	) internal view returns (Vault memory) {
-		for(uint8 i = 0; i<_vault.shortAssets.length; i++) {
-			_updateVault.shortAmount[_vault.shortAssets[i]] = _shortAmounts[i];
-		}
-
-		for(uint8 i = 0; i<_vault.longAssets.length; i++) {
-			_self.longAmount[_longAssets[i]] = _longAmounts[i];
-		}
-
-		for(uint8 i = 0; i<_vault.collAssets.length; i++) {
-			_self.collAmount[_collAssets[i]] = _collAmounts[i];
+	function updateShort(
+		Vault storage _vault,
+		address[] memory _shortAssets,
+		uint256[] memory _shortAmounts,
+		uint8[] memory _shortOp
+	) external returns (Vault memory) {
+		for(uint8 i = 0; i<_shortOp.length; i++) {
+			_vault.shortAmount[_shortAssets[i]] += _shortAmounts[i];
 		}
 
 		return _vault;

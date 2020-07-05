@@ -1,9 +1,9 @@
 {
   "contractName": "MarginCalculator",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/haythem96/Projects/testStruct/contracts/impl1/MarginCalculator.sol\":\"MarginCalculator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/haythem96/Projects/testStruct/contracts/impl1/MarginAccountLib.sol\":{\"keccak256\":\"0xe05664e0efe5fbf82a17de43011c466413bab8d4ccb64fbeebb84f5ef18c5d77\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://836941ac05ae0f43025ed341af9a204f3fbb2a2cef8254a8f8c42ed831c3db92\",\"dweb:/ipfs/QmRK7Fv6YDe6C292LwdaiPsBD1Cn4FiD4VxnajhfMaTLcz\"]},\"/Users/haythem96/Projects/testStruct/contracts/impl1/MarginCalculator.sol\":{\"keccak256\":\"0x9d384415d1c703104348cf88436341c1c729ea7e4b46f9df94163ee91fc7793a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cb152db767593d0ea8fb53ab8d1d43560e4b6b3d4e681aad83c6b69a7d707259\",\"dweb:/ipfs/QmdYh63QwFmL19bYvcUBk9jK9Eec8WKS3VvSLDnvDsgywk\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220561df6610663ce2b6c3039baa86f31ae4e52ff0d00d73f40ff85c82071d2b7e064736f6c63430006090033",
-  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220561df6610663ce2b6c3039baa86f31ae4e52ff0d00d73f40ff85c82071d2b7e064736f6c63430006090033",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/haythem96/Projects/testStruct/contracts/impl1/MarginCalculator.sol\":\"MarginCalculator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/haythem96/Projects/testStruct/contracts/impl1/MarginAccountLib.sol\":{\"keccak256\":\"0x685013cba7133c031f529870e96485f248d05c2d59b7395347fe95feadbe3422\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5b444b136eea3ca8c812a1cdba236b831ee104b1320f8e1022c02ca0f2804c8d\",\"dweb:/ipfs/QmWK7bpfEWAK596K8P1z827wKuMmAaYwFTRy9Ff3LqU2dZ\"]},\"/Users/haythem96/Projects/testStruct/contracts/impl1/MarginCalculator.sol\":{\"keccak256\":\"0x9d384415d1c703104348cf88436341c1c729ea7e4b46f9df94163ee91fc7793a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cb152db767593d0ea8fb53ab8d1d43560e4b6b3d4e681aad83c6b69a7d707259\",\"dweb:/ipfs/QmdYh63QwFmL19bYvcUBk9jK9Eec8WKS3VvSLDnvDsgywk\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212204305f6c4c91ccbdcdcb6f41cea314bba5e5db2478f0917128197d43fe32ef2df64736f6c63430006090033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212204305f6c4c91ccbdcdcb6f41cea314bba5e5db2478f0917128197d43fe32ef2df64736f6c63430006090033",
   "sourceMap": "126:255:3:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "126:255:3:-:0;;;;;",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.9;\n\n\npragma experimental ABIEncoderV2;\n\nimport \"./MarginAccountLib.sol\";\n\ncontract MarginCalculator {\n\n    /*function marginRequirement(\n        MarginAccountLib.Vault memory _vault\n    ) external pure returns (uint256) {\n        require(_vault.shortAssets.length == 1, \"error short assets length\");\n\n        return 0;\n    }*/\n\n}",
@@ -12,15 +12,15 @@
     "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/impl1/MarginCalculator.sol",
     "exportedSymbols": {
       "MarginCalculator": [
-        524
+        52
       ]
     },
-    "id": 525,
+    "id": 53,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 521,
+        "id": 49,
         "literals": [
           "solidity",
           "0.6",
@@ -30,7 +30,7 @@
         "src": "32:22:3"
       },
       {
-        "id": 522,
+        "id": 50,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -41,10 +41,10 @@
       {
         "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/impl1/MarginAccountLib.sol",
         "file": "./MarginAccountLib.sol",
-        "id": 523,
+        "id": 51,
         "nodeType": "ImportDirective",
-        "scope": 525,
-        "sourceUnit": 520,
+        "scope": 53,
+        "sourceUnit": 48,
         "src": "92:32:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -56,14 +56,14 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 524,
+        "id": 52,
         "linearizedBaseContracts": [
-          524
+          52
         ],
         "name": "MarginCalculator",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 525,
+        "scope": 53,
         "src": "126:255:3"
       }
     ],
@@ -73,15 +73,15 @@
     "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/impl1/MarginCalculator.sol",
     "exportedSymbols": {
       "MarginCalculator": [
-        524
+        52
       ]
     },
-    "id": 525,
+    "id": 53,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 521,
+        "id": 49,
         "literals": [
           "solidity",
           "0.6",
@@ -91,7 +91,7 @@
         "src": "32:22:3"
       },
       {
-        "id": 522,
+        "id": 50,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -102,10 +102,10 @@
       {
         "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/impl1/MarginAccountLib.sol",
         "file": "./MarginAccountLib.sol",
-        "id": 523,
+        "id": 51,
         "nodeType": "ImportDirective",
-        "scope": 525,
-        "sourceUnit": 520,
+        "scope": 53,
+        "sourceUnit": 48,
         "src": "92:32:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -117,14 +117,14 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 524,
+        "id": 52,
         "linearizedBaseContracts": [
-          524
+          52
         ],
         "name": "MarginCalculator",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 525,
+        "scope": 53,
         "src": "126:255:3"
       }
     ],
@@ -136,7 +136,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-07-04T17:13:17.680Z",
+  "updatedAt": "2020-07-05T21:40:41.176Z",
   "devdoc": {
     "methods": {}
   },

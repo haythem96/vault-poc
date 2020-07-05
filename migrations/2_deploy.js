@@ -11,12 +11,12 @@ module.exports = function (deployer, network) {
     if(network == "development") {
         deployer.then(async () => {
             //deploy impl1
-            await deployer.deploy(MarginAccountLib);
+            //await deployer.deploy(MarginAccountLib);
 
-            let calculator = await deployer.deploy(MarginCalculator);
+            //let calculator = await deployer.deploy(MarginCalculator);
 
-            await deployer.link(MarginAccountLib, Controller);
-            await deployer.deploy(Controller, calculator.address);
+            //await deployer.link(MarginAccountLib, Controller);
+            //await deployer.deploy(Controller, calculator.address);
 
             //deploy impl2
             await deployer.deploy(MarginAccountLib2);
