@@ -12,10 +12,14 @@ contract Controller3
     using MarginAccount for MarginAccount.Vault;
 
 
-    mapping(address => MarginAccount.Account) internal accounts;
+    mapping(address => MarginAccount.Account) internal accounts;    
     mapping(address => mapping(uint256 => MarginAccount.Vault)) internal vaults;
     mapping(address => mapping(address => bool)) internal accountOperator;
 
+    /// operate function
+    /// _user the address of an account owner
+    /// _vaultId the vaultId
+    /// _actions array of actions
     function operate(
         address _user,
         uint256 _vaultId,
@@ -24,16 +28,26 @@ contract Controller3
         external
     {
 
+        // verify inputs
+        // check if the msg.sender is either an account manager/operator or an account owner
+        // if msg.sender is an operator of '_user' account, get '_user' account, else get sender account
         address accountAddress = _verifyInputs(msg.sender, _user);
 
+        /// loop through the actions
+        /// if there is a open vault action, increment vault ids in the account
+        /// if there is any action other than Call action, check that action argument vaultId is equal to _vaultId
+        /// and check if _vaultId is less than or equal vaultIds(vault counter)
+        /// so this basically will make sure all the actions belong to one vault
         _runPreprocessing(accountAddress, _vaultId, _actions);
 
+        // loop through action, run them and return finale vault
         MarginAccount.Vault memory finalVault = _runActions(
             accountAddress,
             _vaultId,
             _actions
         );
 
+        // veriy vault, basically checkMarginRequirement function
         verifyFinalState(
             finalVault
         );
