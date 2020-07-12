@@ -1,0 +1,3465 @@
+{
+  "contractName": "Actions",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.9+commit.3e3065ac\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/haythem96/Projects/testStruct/contracts/DyDx/lib/Actions.sol\":\"Actions\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/haythem96/Projects/testStruct/contracts/DyDx/lib/Actions.sol\":{\"keccak256\":\"0x9e7aeff7dd866e018d061108b4c0a58c5a6351668075659a78b4bb235664bfda\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a95a867da65de6b52322d6b832b763cbf09343618e0588feaa0b322a2eb3cb95\",\"dweb:/ipfs/QmbL8uNjSMZuu5u1xaA84k3Xsn8Rt1bJmxMhBzG6n7gzvF\"]},\"/Users/haythem96/Projects/testStruct/contracts/DyDx/lib/MarginAccount.sol\":{\"keccak256\":\"0x7c60836ff8e882768073be54ae2d555bec92ba2d0e7d90d980fda56ecec73b05\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://950bd49dcc2cccf7d67d9e3c2667c3b83109654c440bf8807d5a9678481bda0c\",\"dweb:/ipfs/QmWgQjaco4yWK25wLFqZ25kG5yhC2b42aYxS6va5Ek3GVv\"]}},\"version\":1}",
+  "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212200b332625aa35125c872cf7eb3afefedbf64201c2dfa75be9266b059afa3ea1fa64736f6c63430006090033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212200b332625aa35125c872cf7eb3afefedbf64201c2dfa75be9266b059afa3ea1fa64736f6c63430006090033",
+  "sourceMap": "145:2110:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "145:2110:1:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.9;\n\npragma experimental ABIEncoderV2;\n\nimport { MarginAccount } from \"./MarginAccount.sol\";\n\nlibrary Actions {\n\n    enum ActionType {\n        OpenVault,\n        MintShortOption,\n        BurnShortOption,\n        DepositLongOption,\n        WithdrawLongOption,\n        DepositCollateral,\n        WithdrawCollateral,\n        Call\n    }\n\n    struct ActionArgs {\n        ActionType actionType;\n        address sender;\n        address asset;\n        uint256 vaultId;\n        uint256 amount;\n        uint256 index;\n    }\n\n    struct MintShortOptionArgs {\n        address shortOption;\n        uint256 vaultId;\n        uint256 amount; // or struct, similar comment to the one above\n        uint256 index;\n    }\n\n    struct BurnShortOptionArgs {\n        MarginAccount.Account account;\n        address shortOption;\n        uint256 vaultId;\n        uint256 amount; // or struct, similar comment to the one above\n        uint256 index;\n    }\n\n    struct DepositLongOptionArgs {\n        MarginAccount.Account account;\n        uint256 vaultId;\n        address longOption;\n        address from;\n        uint256 amount;\n        uint256 index;\n    }\n\n    struct WithdrawLongOptionArgs {\n        MarginAccount.Account account;\n        uint256 vaultId;\n        address longOption;\n        address to;\n        uint256 amount;\n        uint256 index;\n    }\n\n    struct DepositCollateralArgs {\n        MarginAccount.Account account;\n        uint256 vaultId;\n        address collateral;\n        address from;\n        uint256 amount;\n        uint256 index;\n    }\n\n    struct WithdrawCollateralArgs {\n        MarginAccount.Account account;\n        uint256 vaultId;\n        address collateral;\n        address to;\n        uint256 amount;\n        uint256 index;\n    }\n\n    // ============ Parsing Functions ============\n\n    function parseMintShortOptionArgs(\n        ActionArgs memory args\n    )\n        internal\n        pure\n        returns (MintShortOptionArgs memory)\n    {\n        assert(args.actionType == ActionType.MintShortOption);\n        return MintShortOptionArgs({\n            shortOption: args.asset,\n            vaultId: args.vaultId,\n            amount: args.amount,\n            index: args.index\n        });\n    }\n\n}",
+  "sourcePath": "/Users/haythem96/Projects/testStruct/contracts/DyDx/lib/Actions.sol",
+  "ast": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/DyDx/lib/Actions.sol",
+    "exportedSymbols": {
+      "Actions": [
+        459
+      ]
+    },
+    "id": 460,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 334,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:1"
+      },
+      {
+        "id": 335,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "56:33:1"
+      },
+      {
+        "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/DyDx/lib/MarginAccount.sol",
+        "file": "./MarginAccount.sol",
+        "id": 337,
+        "nodeType": "ImportDirective",
+        "scope": 460,
+        "sourceUnit": 534,
+        "src": "91:52:1",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 336,
+              "name": "MarginAccount",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "100:13:1",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 459,
+        "linearizedBaseContracts": [
+          459
+        ],
+        "name": "Actions",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Actions.ActionType",
+            "id": 346,
+            "members": [
+              {
+                "id": 338,
+                "name": "OpenVault",
+                "nodeType": "EnumValue",
+                "src": "194:9:1"
+              },
+              {
+                "id": 339,
+                "name": "MintShortOption",
+                "nodeType": "EnumValue",
+                "src": "213:15:1"
+              },
+              {
+                "id": 340,
+                "name": "BurnShortOption",
+                "nodeType": "EnumValue",
+                "src": "238:15:1"
+              },
+              {
+                "id": 341,
+                "name": "DepositLongOption",
+                "nodeType": "EnumValue",
+                "src": "263:17:1"
+              },
+              {
+                "id": 342,
+                "name": "WithdrawLongOption",
+                "nodeType": "EnumValue",
+                "src": "290:18:1"
+              },
+              {
+                "id": 343,
+                "name": "DepositCollateral",
+                "nodeType": "EnumValue",
+                "src": "318:17:1"
+              },
+              {
+                "id": 344,
+                "name": "WithdrawCollateral",
+                "nodeType": "EnumValue",
+                "src": "345:18:1"
+              },
+              {
+                "id": 345,
+                "name": "Call",
+                "nodeType": "EnumValue",
+                "src": "373:4:1"
+              }
+            ],
+            "name": "ActionType",
+            "nodeType": "EnumDefinition",
+            "src": "168:215:1"
+          },
+          {
+            "canonicalName": "Actions.ActionArgs",
+            "id": 359,
+            "members": [
+              {
+                "constant": false,
+                "id": 348,
+                "mutability": "mutable",
+                "name": "actionType",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 359,
+                "src": "417:21:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_ActionType_$346",
+                  "typeString": "enum Actions.ActionType"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 347,
+                  "name": "ActionType",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 346,
+                  "src": "417:10:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ActionType_$346",
+                    "typeString": "enum Actions.ActionType"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 350,
+                "mutability": "mutable",
+                "name": "sender",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 359,
+                "src": "448:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 349,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "448:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 352,
+                "mutability": "mutable",
+                "name": "asset",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 359,
+                "src": "472:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 351,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "472:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 354,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 359,
+                "src": "495:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 353,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "495:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 356,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 359,
+                "src": "520:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 355,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "520:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 358,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 359,
+                "src": "544:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 357,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "544:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ActionArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "389:175:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Actions.MintShortOptionArgs",
+            "id": 368,
+            "members": [
+              {
+                "constant": false,
+                "id": 361,
+                "mutability": "mutable",
+                "name": "shortOption",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 368,
+                "src": "607:19:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 360,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "607:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 363,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 368,
+                "src": "636:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 362,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "636:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 365,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 368,
+                "src": "661:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 364,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "661:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 367,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 368,
+                "src": "732:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 366,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "732:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "MintShortOptionArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "570:182:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Actions.BurnShortOptionArgs",
+            "id": 379,
+            "members": [
+              {
+                "constant": false,
+                "id": 370,
+                "mutability": "mutable",
+                "name": "account",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 379,
+                "src": "795:29:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                  "typeString": "struct MarginAccount.Account"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 369,
+                  "name": "MarginAccount.Account",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 469,
+                  "src": "795:21:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                    "typeString": "struct MarginAccount.Account"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 372,
+                "mutability": "mutable",
+                "name": "shortOption",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 379,
+                "src": "834:19:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 371,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "834:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 374,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 379,
+                "src": "863:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 373,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "863:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 376,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 379,
+                "src": "888:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 375,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "888:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 378,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 379,
+                "src": "959:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 377,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "959:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "BurnShortOptionArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "758:221:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Actions.DepositLongOptionArgs",
+            "id": 392,
+            "members": [
+              {
+                "constant": false,
+                "id": 381,
+                "mutability": "mutable",
+                "name": "account",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 392,
+                "src": "1024:29:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                  "typeString": "struct MarginAccount.Account"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 380,
+                  "name": "MarginAccount.Account",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 469,
+                  "src": "1024:21:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                    "typeString": "struct MarginAccount.Account"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 383,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 392,
+                "src": "1063:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 382,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1063:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 385,
+                "mutability": "mutable",
+                "name": "longOption",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 392,
+                "src": "1088:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 384,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1088:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 387,
+                "mutability": "mutable",
+                "name": "from",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 392,
+                "src": "1116:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 386,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1116:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 389,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 392,
+                "src": "1138:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 388,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1138:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 391,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 392,
+                "src": "1162:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 390,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1162:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "DepositLongOptionArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "985:197:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Actions.WithdrawLongOptionArgs",
+            "id": 405,
+            "members": [
+              {
+                "constant": false,
+                "id": 394,
+                "mutability": "mutable",
+                "name": "account",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 405,
+                "src": "1228:29:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                  "typeString": "struct MarginAccount.Account"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 393,
+                  "name": "MarginAccount.Account",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 469,
+                  "src": "1228:21:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                    "typeString": "struct MarginAccount.Account"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 396,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 405,
+                "src": "1267:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 395,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1267:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 398,
+                "mutability": "mutable",
+                "name": "longOption",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 405,
+                "src": "1292:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 397,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1292:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 400,
+                "mutability": "mutable",
+                "name": "to",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 405,
+                "src": "1320:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 399,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1320:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 402,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 405,
+                "src": "1340:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 401,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1340:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 404,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 405,
+                "src": "1364:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 403,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1364:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "WithdrawLongOptionArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "1188:196:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Actions.DepositCollateralArgs",
+            "id": 418,
+            "members": [
+              {
+                "constant": false,
+                "id": 407,
+                "mutability": "mutable",
+                "name": "account",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 418,
+                "src": "1429:29:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                  "typeString": "struct MarginAccount.Account"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 406,
+                  "name": "MarginAccount.Account",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 469,
+                  "src": "1429:21:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                    "typeString": "struct MarginAccount.Account"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 409,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 418,
+                "src": "1468:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 408,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1468:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 411,
+                "mutability": "mutable",
+                "name": "collateral",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 418,
+                "src": "1493:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 410,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1493:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 413,
+                "mutability": "mutable",
+                "name": "from",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 418,
+                "src": "1521:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 412,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1521:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 415,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 418,
+                "src": "1543:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 414,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1543:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 417,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 418,
+                "src": "1567:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 416,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1567:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "DepositCollateralArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "1390:197:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Actions.WithdrawCollateralArgs",
+            "id": 431,
+            "members": [
+              {
+                "constant": false,
+                "id": 420,
+                "mutability": "mutable",
+                "name": "account",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 431,
+                "src": "1633:29:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                  "typeString": "struct MarginAccount.Account"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 419,
+                  "name": "MarginAccount.Account",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 469,
+                  "src": "1633:21:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                    "typeString": "struct MarginAccount.Account"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 422,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 431,
+                "src": "1672:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 421,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1672:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 424,
+                "mutability": "mutable",
+                "name": "collateral",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 431,
+                "src": "1697:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 423,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1697:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 426,
+                "mutability": "mutable",
+                "name": "to",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 431,
+                "src": "1725:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 425,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1725:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 428,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 431,
+                "src": "1745:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 427,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1745:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 430,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 431,
+                "src": "1769:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 429,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1769:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "WithdrawCollateralArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "1593:196:1",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 457,
+              "nodeType": "Block",
+              "src": "1998:254:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_enum$_ActionType_$346",
+                          "typeString": "enum Actions.ActionType"
+                        },
+                        "id": 443,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 439,
+                            "name": "args",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 433,
+                            "src": "2015:4:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_ActionArgs_$359_memory_ptr",
+                              "typeString": "struct Actions.ActionArgs memory"
+                            }
+                          },
+                          "id": 440,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "actionType",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 348,
+                          "src": "2015:15:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_ActionType_$346",
+                            "typeString": "enum Actions.ActionType"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 441,
+                            "name": "ActionType",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 346,
+                            "src": "2034:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_enum$_ActionType_$346_$",
+                              "typeString": "type(enum Actions.ActionType)"
+                            }
+                          },
+                          "id": 442,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "MintShortOption",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "2034:26:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_ActionType_$346",
+                            "typeString": "enum Actions.ActionType"
+                          }
+                        },
+                        "src": "2015:45:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 438,
+                      "name": "assert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -3,
+                      "src": "2008:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 444,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2008:53:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 445,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2008:53:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 447,
+                          "name": "args",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 433,
+                          "src": "2125:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ActionArgs_$359_memory_ptr",
+                            "typeString": "struct Actions.ActionArgs memory"
+                          }
+                        },
+                        "id": 448,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "asset",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 352,
+                        "src": "2125:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 449,
+                          "name": "args",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 433,
+                          "src": "2158:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ActionArgs_$359_memory_ptr",
+                            "typeString": "struct Actions.ActionArgs memory"
+                          }
+                        },
+                        "id": 450,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "vaultId",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 354,
+                        "src": "2158:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 451,
+                          "name": "args",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 433,
+                          "src": "2192:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ActionArgs_$359_memory_ptr",
+                            "typeString": "struct Actions.ActionArgs memory"
+                          }
+                        },
+                        "id": 452,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "amount",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 356,
+                        "src": "2192:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 453,
+                          "name": "args",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 433,
+                          "src": "2224:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ActionArgs_$359_memory_ptr",
+                            "typeString": "struct Actions.ActionArgs memory"
+                          }
+                        },
+                        "id": 454,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "index",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 358,
+                        "src": "2224:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 446,
+                      "name": "MintShortOptionArgs",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 368,
+                      "src": "2078:19:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_MintShortOptionArgs_$368_storage_ptr_$",
+                        "typeString": "type(struct Actions.MintShortOptionArgs storage pointer)"
+                      }
+                    },
+                    "id": 455,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "shortOption",
+                      "vaultId",
+                      "amount",
+                      "index"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "2078:167:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_MintShortOptionArgs_$368_memory_ptr",
+                      "typeString": "struct Actions.MintShortOptionArgs memory"
+                    }
+                  },
+                  "functionReturnParameters": 437,
+                  "id": 456,
+                  "nodeType": "Return",
+                  "src": "2071:174:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 458,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "parseMintShortOptionArgs",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 434,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 433,
+                  "mutability": "mutable",
+                  "name": "args",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 458,
+                  "src": "1890:22:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ActionArgs_$359_memory_ptr",
+                    "typeString": "struct Actions.ActionArgs"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 432,
+                    "name": "ActionArgs",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 359,
+                    "src": "1890:10:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ActionArgs_$359_storage_ptr",
+                      "typeString": "struct Actions.ActionArgs"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1880:38:1"
+            },
+            "returnParameters": {
+              "id": 437,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 436,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 458,
+                  "src": "1966:26:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_MintShortOptionArgs_$368_memory_ptr",
+                    "typeString": "struct Actions.MintShortOptionArgs"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 435,
+                    "name": "MintShortOptionArgs",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 368,
+                    "src": "1966:19:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_MintShortOptionArgs_$368_storage_ptr",
+                      "typeString": "struct Actions.MintShortOptionArgs"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1965:28:1"
+            },
+            "scope": 459,
+            "src": "1847:405:1",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 460,
+        "src": "145:2110:1"
+      }
+    ],
+    "src": "32:2223:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/DyDx/lib/Actions.sol",
+    "exportedSymbols": {
+      "Actions": [
+        459
+      ]
+    },
+    "id": 460,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 334,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:1"
+      },
+      {
+        "id": 335,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "56:33:1"
+      },
+      {
+        "absolutePath": "/Users/haythem96/Projects/testStruct/contracts/DyDx/lib/MarginAccount.sol",
+        "file": "./MarginAccount.sol",
+        "id": 337,
+        "nodeType": "ImportDirective",
+        "scope": 460,
+        "sourceUnit": 534,
+        "src": "91:52:1",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "argumentTypes": null,
+              "id": 336,
+              "name": "MarginAccount",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": null,
+              "src": "100:13:1",
+              "typeDescriptions": {
+                "typeIdentifier": null,
+                "typeString": null
+              }
+            },
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 459,
+        "linearizedBaseContracts": [
+          459
+        ],
+        "name": "Actions",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Actions.ActionType",
+            "id": 346,
+            "members": [
+              {
+                "id": 338,
+                "name": "OpenVault",
+                "nodeType": "EnumValue",
+                "src": "194:9:1"
+              },
+              {
+                "id": 339,
+                "name": "MintShortOption",
+                "nodeType": "EnumValue",
+                "src": "213:15:1"
+              },
+              {
+                "id": 340,
+                "name": "BurnShortOption",
+                "nodeType": "EnumValue",
+                "src": "238:15:1"
+              },
+              {
+                "id": 341,
+                "name": "DepositLongOption",
+                "nodeType": "EnumValue",
+                "src": "263:17:1"
+              },
+              {
+                "id": 342,
+                "name": "WithdrawLongOption",
+                "nodeType": "EnumValue",
+                "src": "290:18:1"
+              },
+              {
+                "id": 343,
+                "name": "DepositCollateral",
+                "nodeType": "EnumValue",
+                "src": "318:17:1"
+              },
+              {
+                "id": 344,
+                "name": "WithdrawCollateral",
+                "nodeType": "EnumValue",
+                "src": "345:18:1"
+              },
+              {
+                "id": 345,
+                "name": "Call",
+                "nodeType": "EnumValue",
+                "src": "373:4:1"
+              }
+            ],
+            "name": "ActionType",
+            "nodeType": "EnumDefinition",
+            "src": "168:215:1"
+          },
+          {
+            "canonicalName": "Actions.ActionArgs",
+            "id": 359,
+            "members": [
+              {
+                "constant": false,
+                "id": 348,
+                "mutability": "mutable",
+                "name": "actionType",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 359,
+                "src": "417:21:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_ActionType_$346",
+                  "typeString": "enum Actions.ActionType"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 347,
+                  "name": "ActionType",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 346,
+                  "src": "417:10:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ActionType_$346",
+                    "typeString": "enum Actions.ActionType"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 350,
+                "mutability": "mutable",
+                "name": "sender",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 359,
+                "src": "448:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 349,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "448:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 352,
+                "mutability": "mutable",
+                "name": "asset",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 359,
+                "src": "472:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 351,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "472:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 354,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 359,
+                "src": "495:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 353,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "495:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 356,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 359,
+                "src": "520:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 355,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "520:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 358,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 359,
+                "src": "544:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 357,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "544:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ActionArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "389:175:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Actions.MintShortOptionArgs",
+            "id": 368,
+            "members": [
+              {
+                "constant": false,
+                "id": 361,
+                "mutability": "mutable",
+                "name": "shortOption",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 368,
+                "src": "607:19:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 360,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "607:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 363,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 368,
+                "src": "636:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 362,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "636:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 365,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 368,
+                "src": "661:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 364,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "661:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 367,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 368,
+                "src": "732:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 366,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "732:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "MintShortOptionArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "570:182:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Actions.BurnShortOptionArgs",
+            "id": 379,
+            "members": [
+              {
+                "constant": false,
+                "id": 370,
+                "mutability": "mutable",
+                "name": "account",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 379,
+                "src": "795:29:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                  "typeString": "struct MarginAccount.Account"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 369,
+                  "name": "MarginAccount.Account",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 469,
+                  "src": "795:21:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                    "typeString": "struct MarginAccount.Account"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 372,
+                "mutability": "mutable",
+                "name": "shortOption",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 379,
+                "src": "834:19:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 371,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "834:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 374,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 379,
+                "src": "863:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 373,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "863:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 376,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 379,
+                "src": "888:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 375,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "888:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 378,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 379,
+                "src": "959:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 377,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "959:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "BurnShortOptionArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "758:221:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Actions.DepositLongOptionArgs",
+            "id": 392,
+            "members": [
+              {
+                "constant": false,
+                "id": 381,
+                "mutability": "mutable",
+                "name": "account",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 392,
+                "src": "1024:29:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                  "typeString": "struct MarginAccount.Account"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 380,
+                  "name": "MarginAccount.Account",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 469,
+                  "src": "1024:21:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                    "typeString": "struct MarginAccount.Account"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 383,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 392,
+                "src": "1063:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 382,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1063:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 385,
+                "mutability": "mutable",
+                "name": "longOption",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 392,
+                "src": "1088:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 384,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1088:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 387,
+                "mutability": "mutable",
+                "name": "from",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 392,
+                "src": "1116:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 386,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1116:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 389,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 392,
+                "src": "1138:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 388,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1138:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 391,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 392,
+                "src": "1162:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 390,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1162:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "DepositLongOptionArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "985:197:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Actions.WithdrawLongOptionArgs",
+            "id": 405,
+            "members": [
+              {
+                "constant": false,
+                "id": 394,
+                "mutability": "mutable",
+                "name": "account",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 405,
+                "src": "1228:29:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                  "typeString": "struct MarginAccount.Account"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 393,
+                  "name": "MarginAccount.Account",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 469,
+                  "src": "1228:21:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                    "typeString": "struct MarginAccount.Account"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 396,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 405,
+                "src": "1267:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 395,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1267:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 398,
+                "mutability": "mutable",
+                "name": "longOption",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 405,
+                "src": "1292:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 397,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1292:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 400,
+                "mutability": "mutable",
+                "name": "to",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 405,
+                "src": "1320:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 399,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1320:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 402,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 405,
+                "src": "1340:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 401,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1340:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 404,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 405,
+                "src": "1364:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 403,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1364:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "WithdrawLongOptionArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "1188:196:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Actions.DepositCollateralArgs",
+            "id": 418,
+            "members": [
+              {
+                "constant": false,
+                "id": 407,
+                "mutability": "mutable",
+                "name": "account",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 418,
+                "src": "1429:29:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                  "typeString": "struct MarginAccount.Account"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 406,
+                  "name": "MarginAccount.Account",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 469,
+                  "src": "1429:21:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                    "typeString": "struct MarginAccount.Account"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 409,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 418,
+                "src": "1468:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 408,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1468:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 411,
+                "mutability": "mutable",
+                "name": "collateral",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 418,
+                "src": "1493:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 410,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1493:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 413,
+                "mutability": "mutable",
+                "name": "from",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 418,
+                "src": "1521:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 412,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1521:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 415,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 418,
+                "src": "1543:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 414,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1543:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 417,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 418,
+                "src": "1567:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 416,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1567:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "DepositCollateralArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "1390:197:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Actions.WithdrawCollateralArgs",
+            "id": 431,
+            "members": [
+              {
+                "constant": false,
+                "id": 420,
+                "mutability": "mutable",
+                "name": "account",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 431,
+                "src": "1633:29:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                  "typeString": "struct MarginAccount.Account"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 419,
+                  "name": "MarginAccount.Account",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 469,
+                  "src": "1633:21:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Account_$469_storage_ptr",
+                    "typeString": "struct MarginAccount.Account"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 422,
+                "mutability": "mutable",
+                "name": "vaultId",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 431,
+                "src": "1672:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 421,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1672:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 424,
+                "mutability": "mutable",
+                "name": "collateral",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 431,
+                "src": "1697:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 423,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1697:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 426,
+                "mutability": "mutable",
+                "name": "to",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 431,
+                "src": "1725:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 425,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1725:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 428,
+                "mutability": "mutable",
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 431,
+                "src": "1745:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 427,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1745:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 430,
+                "mutability": "mutable",
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 431,
+                "src": "1769:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 429,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1769:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "WithdrawCollateralArgs",
+            "nodeType": "StructDefinition",
+            "scope": 459,
+            "src": "1593:196:1",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 457,
+              "nodeType": "Block",
+              "src": "1998:254:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_enum$_ActionType_$346",
+                          "typeString": "enum Actions.ActionType"
+                        },
+                        "id": 443,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 439,
+                            "name": "args",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 433,
+                            "src": "2015:4:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_ActionArgs_$359_memory_ptr",
+                              "typeString": "struct Actions.ActionArgs memory"
+                            }
+                          },
+                          "id": 440,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "actionType",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 348,
+                          "src": "2015:15:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_ActionType_$346",
+                            "typeString": "enum Actions.ActionType"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 441,
+                            "name": "ActionType",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 346,
+                            "src": "2034:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_enum$_ActionType_$346_$",
+                              "typeString": "type(enum Actions.ActionType)"
+                            }
+                          },
+                          "id": 442,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "MintShortOption",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "2034:26:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_ActionType_$346",
+                            "typeString": "enum Actions.ActionType"
+                          }
+                        },
+                        "src": "2015:45:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 438,
+                      "name": "assert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": -3,
+                      "src": "2008:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 444,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2008:53:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 445,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2008:53:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 447,
+                          "name": "args",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 433,
+                          "src": "2125:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ActionArgs_$359_memory_ptr",
+                            "typeString": "struct Actions.ActionArgs memory"
+                          }
+                        },
+                        "id": 448,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "asset",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 352,
+                        "src": "2125:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 449,
+                          "name": "args",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 433,
+                          "src": "2158:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ActionArgs_$359_memory_ptr",
+                            "typeString": "struct Actions.ActionArgs memory"
+                          }
+                        },
+                        "id": 450,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "vaultId",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 354,
+                        "src": "2158:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 451,
+                          "name": "args",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 433,
+                          "src": "2192:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ActionArgs_$359_memory_ptr",
+                            "typeString": "struct Actions.ActionArgs memory"
+                          }
+                        },
+                        "id": 452,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "amount",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 356,
+                        "src": "2192:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 453,
+                          "name": "args",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 433,
+                          "src": "2224:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ActionArgs_$359_memory_ptr",
+                            "typeString": "struct Actions.ActionArgs memory"
+                          }
+                        },
+                        "id": 454,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "index",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 358,
+                        "src": "2224:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 446,
+                      "name": "MintShortOptionArgs",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 368,
+                      "src": "2078:19:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_MintShortOptionArgs_$368_storage_ptr_$",
+                        "typeString": "type(struct Actions.MintShortOptionArgs storage pointer)"
+                      }
+                    },
+                    "id": 455,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "shortOption",
+                      "vaultId",
+                      "amount",
+                      "index"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "2078:167:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_MintShortOptionArgs_$368_memory_ptr",
+                      "typeString": "struct Actions.MintShortOptionArgs memory"
+                    }
+                  },
+                  "functionReturnParameters": 437,
+                  "id": 456,
+                  "nodeType": "Return",
+                  "src": "2071:174:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 458,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "parseMintShortOptionArgs",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 434,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 433,
+                  "mutability": "mutable",
+                  "name": "args",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 458,
+                  "src": "1890:22:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ActionArgs_$359_memory_ptr",
+                    "typeString": "struct Actions.ActionArgs"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 432,
+                    "name": "ActionArgs",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 359,
+                    "src": "1890:10:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ActionArgs_$359_storage_ptr",
+                      "typeString": "struct Actions.ActionArgs"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1880:38:1"
+            },
+            "returnParameters": {
+              "id": 437,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 436,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 458,
+                  "src": "1966:26:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_MintShortOptionArgs_$368_memory_ptr",
+                    "typeString": "struct Actions.MintShortOptionArgs"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 435,
+                    "name": "MintShortOptionArgs",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 368,
+                    "src": "1966:19:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_MintShortOptionArgs_$368_storage_ptr",
+                      "typeString": "struct Actions.MintShortOptionArgs"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1965:28:1"
+            },
+            "scope": 459,
+            "src": "1847:405:1",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 460,
+        "src": "145:2110:1"
+      }
+    ],
+    "src": "32:2223:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.9+commit.3e3065ac.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-07-12T01:00:24.221Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
