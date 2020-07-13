@@ -12,9 +12,18 @@ contract Controller3
     using MarginAccount for MarginAccount.Vault;
 
 
-    mapping(address => MarginAccount.Account) internal accounts;    
+    mapping(address => MarginAccount.Account) internal accounts;
     mapping(address => mapping(uint256 => MarginAccount.Vault)) internal vaults;
     mapping(address => mapping(address => bool)) internal accountOperator;
+
+    modifier isAuth(address _sender, address _userAccount) {
+        require(
+            isOwner(_sender, _userAccount) || isOperator(_sender, _userAccount),
+            "sender is not auth"
+        );
+
+        _;
+    }
 
     /// operate function
     /// _user the address of an account owner
@@ -25,24 +34,24 @@ contract Controller3
         uint256 _vaultId,
         Actions.ActionArgs[] memory _actions
     )
-        external
+        external isAuth(msg.sender, _user)
     {
 
         // verify inputs
         // check if the msg.sender is either an account manager/operator or an account owner
         // if msg.sender is an operator of '_user' account, get '_user' account, else get sender account
-        address accountAddress = _verifyInputs(msg.sender, _user);
+        //address accountAddress = _verifyInputs(msg.sender, _user);
 
         /// loop through the actions
         /// if there is a open vault action, increment vault ids in the account
         /// if there is any action other than Call action, check that action argument vaultId is equal to _vaultId
         /// and check if _vaultId is less than or equal vaultIds(vault counter)
         /// so this basically will make sure all the actions belong to one vault
-        _runPreprocessing(accountAddress, _vaultId, _actions);
+        _runPreprocessing(_user, _vaultId, _actions);
 
         // loop through action, run them and return finale vault
         MarginAccount.Vault memory finalVault = _runActions(
-            accountAddress,
+            _user,
             _vaultId,
             _actions
         );
@@ -53,7 +62,7 @@ contract Controller3
         );
     }
 
-    function getAccountData(address _accountOwner) external view returns (address, address, uint256) {
+    function getAccountData(address _accountOwner) public view returns (address, address, uint256) {
         MarginAccount.Account memory account = accounts[_accountOwner];
 
         return (
@@ -63,6 +72,17 @@ contract Controller3
         );
     }
 
+    function isOperator(address _sender, address _userAccount) public view returns (bool) {
+        (, address operator , ) = getAccountData(_userAccount);
+        return _sender == operator;
+    }
+
+    function isOwner(address _sender, address _userAccount) public view returns (bool) {
+        (address owner, , ) = getAccountData(_userAccount);
+        return _sender == owner;
+    }
+
+
     function getVault(address _accountOwner, uint256 _vaultId) external view returns (MarginAccount.Vault memory) {
 		return vaults[_accountOwner][_vaultId];
 	}
@@ -71,10 +91,9 @@ contract Controller3
         return accountOperator[_operator][_accountOwner];
     }
 
-    // check if sender is operator of an account, return the owner address, else return the sender address
-    function _verifyInputs(address _sender, address _user) internal view returns (address) {
-        return accountOperator[_sender][_user] ? _user : _sender;
-    }
+    // use this function to check whitelised collateral
+    //function _verifyInputs(address _sender, address _user) internal view returns (address) {
+    //}
 
     // will check for Open Vault actions, execute them and make sure there is not vault id greater than vault counter;
     function _runPreprocessing(

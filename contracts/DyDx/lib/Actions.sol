@@ -25,6 +25,7 @@ library Actions {
         uint256 vaultId;
         uint256 amount;
         uint256 index;
+        bytes data;
     }
 
     struct MintShortOptionArgs {
